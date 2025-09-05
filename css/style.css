@@ -607,7 +607,7 @@ a:focus {
     background: transparent;
 }
 
-.about .about-tab .tab-content .container {
+.about .about-tab .tab-content .container-fluid {
     padding: 0;
 }
 
@@ -702,11 +702,11 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-.container .donate {
+.container-fluid .donate {
     margin: 90px 0;
 }
 
-.container .donate .donate-content {
+.container-fluid .donate .donate-content {
     padding: 45px 30px 15px 30px;
 }
 
@@ -1133,11 +1133,11 @@ a:focus {
     padding: 30px 0 45px 0;
 }
 
-.container .volunteer {
+.container-fluid .volunteer {
     margin: 90px 0;
 }
 
-.container .volunteer .volunteer-content {
+.container-fluid .volunteer .volunteer-content {
     padding: 45px 30px 15px 30px;
 }
 
@@ -1850,7 +1850,7 @@ a:focus {
     background: transparent;
 }
 
-.sidebar .tab-post .tab-content .container {
+.sidebar .tab-post .tab-content .container-fluid {
     padding: 0;
 }
 
