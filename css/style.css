@@ -1967,7 +1967,7 @@ a:focus {
 /* Firefox */
 html {
     scrollbar-width: thin;
-    scrollbar-color: #F26522 #f3f6ff;
+    scrollbar-color: #4a4c70 #f3f6ff;
 }
 
 /* Chrome, Edge, Safari */
@@ -1981,11 +1981,11 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #F26522;
+    background-color: #4a4c70;
     border-radius: 8px;
     border: 2px solid #f3f6ff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #d1541e;
+    background-color: #1a1b26;
 }

@@ -41,8 +41,8 @@ body {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     135deg,
-    var(--primary-color) 0%,
-    #ff8c42 100%
+    var(--secondary-color) 0%,
+    var(--dark-bg) 100%
   );
   border-radius: 10px;
   border: 2px solid rgba(26, 27, 38, 0.5);
@@ -53,20 +53,20 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(
     135deg,
-    #ff8c42 0%,
-    var(--primary-color) 100%
+    var(--dark-bg) 0%,
+    var(--secondary-color) 100%
   );
-  box-shadow: 0 2px 8px rgba(242, 101, 34, 0.4);
+  box-shadow: 0 2px 8px rgba(74, 76, 112, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 /* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) #0f172a; /* thumb color | track color */
+  scrollbar-color: var(--secondary-color) #0f172a; /* thumb color | track color */
 }
 
 /* For dropdown menus scrollbar */
@@ -83,7 +83,7 @@ body {
   background: linear-gradient(
     135deg,
     rgba(74, 76, 112, 0.8) 0%,
-    rgba(242, 101, 34, 0.8) 100%
+    rgba(26, 27, 38, 0.8) 100%
   );
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -642,7 +642,7 @@ body {
   transform: translateX(-50%) translateY(-10px);
   border: none !important;
   border-radius: 12px !important;
-  padding: 15px !important;
+  padding: 10px 8px !important;
   margin-top: 0 !important;
   background: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(15px);
@@ -695,7 +695,7 @@ body {
 
 /* Dropdown Items */
 .navbar.navbar-modern .dropdown-item {
-  padding: 12px 15px !important;
+  padding: 12px 20px !important;
   color: var(--text-dark) !important;
   font-weight: 500;
   border-radius: 8px;
@@ -704,7 +704,11 @@ body {
   align-items: center;
   gap: 12px;
   font-size: 14px !important;
-  margin: 3px 0;
+  margin: 8px 5px;
+  text-decoration: none !important;
+  position: relative;
+  border: none !important;
+  outline: none !important;
 }
 
 .navbar.navbar-modern .dropdown-item i {
@@ -722,7 +726,19 @@ body {
   ) !important;
   color: var(--primary-color) !important;
   transform: translateX(4px);
-  padding-left: 20px !important;
+  padding-left: 24px !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar.navbar-modern .dropdown-item:focus,
+.navbar.navbar-modern .dropdown-item:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Join Us Dropdown Special Styling */
