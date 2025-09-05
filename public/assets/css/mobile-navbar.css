@@ -47,6 +47,7 @@
     transform: translateX(100%);
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow-y: auto;
+    overflow-x: hidden;
     padding-top: 80px;
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.3);
   }
@@ -119,9 +120,10 @@
     width: 100%;
     max-width: none; /* full width list */
     padding: 0 20px 40px;
-    flex: 1;
-    overflow-y: auto;
+    flex: none; /* Don't flex-shrink */
+    overflow-y: visible; /* Allow expansion */
     align-items: stretch; /* ensure children stretch */
+    min-height: auto; /* Allow natural height */
   }
 
   .navbar.navbar-modern .nav-item {
@@ -226,7 +228,7 @@
     ) !important;
     border-color: var(--primary-color) !important;
     box-shadow: 0 14px 40px rgba(242, 101, 34, 0.35);
-    max-height: calc(64px + 60vh); /* header + submenu cap */
+    max-height: none; /* Allow unlimited expansion */
   }
 
   /* Override desktop mega menu behavior on mobile */
@@ -260,14 +262,12 @@
   }
 
   .navbar.navbar-modern .dropdown.show .dropdown-menu {
-    max-height: 60vh; /* keep other cards visible */
+    max-height: none; /* Allow natural height */
     opacity: 1 !important;
     visibility: visible !important;
     padding: 18px 15px 20px !important;
     transform: translateY(0) !important;
-    overflow-y: auto; /* scroll within card */
-    overscroll-behavior: contain; /* prevent body scroll while inside */
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    overflow-y: visible; /* No scrolling, let it expand naturally */
   }
 
   /* Submenu scrollbar styling (WebKit) */
