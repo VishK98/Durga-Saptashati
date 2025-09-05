@@ -47,21 +47,39 @@ body {
 
 /* Modern Navbar Container */
 .navbar.navbar-modern {
-  background: transparent;
-  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0px);
   position: absolute;
   top: 45px;
   left: 0;
   right: 0;
   width: 100%;
   min-height: var(--navbar-height);
-  transition: all var(--transition);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              background-color 0.3s ease-in-out,
+              backdrop-filter 0.3s ease-in-out,
+              border-color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
   z-index: 1050;
-  box-shadow: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0;
   margin: 0;
+}
+
+/* Header background becomes white when dropdown is hovered on transparent state */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky):hover {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* More specific hover for dropdown areas */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky) .dropdown:hover ~ *,
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky) .dropdown:hover {
+  --header-hovered: 1;
 }
 
 .navbar.navbar-modern.scrolled {
@@ -69,7 +87,7 @@ body {
   top: 0;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-medium);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -307,11 +325,12 @@ body {
   right: 0 !important;
   width: 100% !important;
   background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(15px);
-  box-shadow: var(--shadow-medium) !important;
-  animation: slideDown 0.4s ease;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  animation: slideDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1060 !important;
   transform: translateY(0) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 @keyframes slideDown {
@@ -479,6 +498,12 @@ body {
   animation: logoColorPulse 4s ease-in-out infinite;
 }
 
+/* Logo becomes colorful when transparent header is hovered */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky):hover .navbar-brand img {
+  filter: none; /* Show original colors */
+  animation: none; /* Stop the white/color transition animation */
+}
+
 /* Stop color animation on hover for scrolled state */
 .navbar.navbar-modern.scrolled .navbar-brand:hover img,
 .navbar.navbar-modern.nav-sticky .navbar-brand:hover img {
@@ -510,7 +535,9 @@ body {
   font-weight: 600 !important;
   letter-spacing: 0.3px;
   text-transform: capitalize;
-  transition: all var(--transition) !important;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              color 0.5s ease-in-out,
+              text-shadow 0.5s ease-in-out !important;
   position: relative;
   display: flex;
   align-items: center;
@@ -547,6 +574,16 @@ body {
 .navbar.navbar-modern.nav-sticky .nav-link:hover,
 .navbar.navbar-modern.scrolled .nav-link.active,
 .navbar.navbar-modern.nav-sticky .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Text color when transparent header is hovered */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky):hover .nav-link {
+  color: var(--secondary-color) !important;
+  text-shadow: none;
+}
+
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky):hover .nav-link:hover {
   color: var(--primary-color) !important;
 }
 
@@ -910,21 +947,21 @@ body {
 .rally-btn {
   background: var(--gradient-primary);
   color: white !important;
-  padding: 12px 28px;
+  padding: 10px 22px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
   transition: all var(--transition);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 20px rgba(242, 101, 34, 0.25);
-  margin-left: 30px;
+  gap: 8px;
+  box-shadow: 0 3px 15px rgba(242, 101, 34, 0.25);
+  margin-left: 25px;
   white-space: nowrap;
   text-decoration: none;
 }
@@ -932,6 +969,11 @@ body {
 /* CTA button for scrolled state */
 .navbar.navbar-modern.scrolled .rally-btn,
 .navbar.navbar-modern.nav-sticky .rally-btn {
+  border: 2px solid transparent;
+}
+
+/* CTA button when transparent header is hovered */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky):hover .rally-btn {
   border: 2px solid transparent;
 }
 
@@ -1007,7 +1049,7 @@ body {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 3px;
   position: absolute;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hamburger-inner {
@@ -1036,6 +1078,13 @@ body {
 .navbar-modern.nav-sticky .hamburger-inner,
 .navbar-modern.nav-sticky .hamburger-inner::before,
 .navbar-modern.nav-sticky .hamburger-inner::after {
+  background-color: var(--secondary-color);
+}
+
+/* Hamburger color when transparent header is hovered */
+.navbar-modern:not(.scrolled):not(.nav-sticky):hover .hamburger-inner,
+.navbar-modern:not(.scrolled):not(.nav-sticky):hover .hamburger-inner::before,
+.navbar-modern:not(.scrolled):not(.nav-sticky):hover .hamburger-inner::after {
   background-color: var(--secondary-color);
 }
 
