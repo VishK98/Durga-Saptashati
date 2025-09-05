@@ -14,7 +14,7 @@ include '../app/views/layout/header.php';
         <div class="owl-carousel">
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel-1.jpg'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel.webp'); ?>" alt="Image">
                 </div>
                 <div class="carousel-text">
                     <h1>Let's be kind for children</h1>
@@ -32,7 +32,7 @@ include '../app/views/layout/header.php';
             </div>
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel-2.jpg'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel-1.webp'); ?>" alt="Image">
                 </div>
                 <div class="carousel-text">
                     <h1>Get Involved with helping hand</h1>
@@ -50,7 +50,7 @@ include '../app/views/layout/header.php';
             </div>
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel-3.jpg'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel-2.webp'); ?>" alt="Image">
                 </div>
                 <div class="carousel-text">
                     <h1>Bringing smiles to millions</h1>

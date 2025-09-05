@@ -77,10 +77,6 @@
                             title="Subscribe to our YouTube" data-toggle="tooltip" data-placement="bottom">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="<?= url('donate.php') ?>" class="btn" title="Donate Now" data-toggle="tooltip"
-                            data-placement="bottom">
-                            <i class="fas fa-heart"></i>
-                        </a>
                     </div>
                 </div>
             </div>
