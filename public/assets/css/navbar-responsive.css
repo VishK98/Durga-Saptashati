@@ -330,23 +330,159 @@ body {
   padding: 10px 15px 10px 0;
   margin-right: 30px;
   transition: transform var(--transition);
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Logo container - clean, no background */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky) .navbar-brand {
+  overflow: visible;
+}
+
+
+/* Ultra-smooth video-like logo animation */
+@keyframes logoVideoTransition {
+  0% {
+    filter: brightness(0) invert(1);
+  }
+  5% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+  10% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  }
+  15% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  }
+  20% {
+    filter: brightness(0.05) invert(0.95) drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  }
+  25% {
+    filter: brightness(0.1) invert(0.9) sepia(0.05);
+  }
+  30% {
+    filter: brightness(0.2) invert(0.8) sepia(0.1);
+  }
+  35% {
+    filter: brightness(0.3) invert(0.7) sepia(0.15);
+  }
+  40% {
+    filter: brightness(0.5) invert(0.5) sepia(0.2) saturate(0.8);
+  }
+  45% {
+    filter: brightness(0.7) invert(0.3) sepia(0.1) saturate(1.0);
+  }
+  50% {
+    filter: brightness(0.85) invert(0.15) saturate(1.1);
+  }
+  55% {
+    filter: brightness(0.95) invert(0.05) saturate(1.15);
+  }
+  60% {
+    filter: brightness(1) invert(0) saturate(1.2);
+  }
+  65% {
+    filter: brightness(1) invert(0) saturate(1.15) hue-rotate(5deg);
+  }
+  70% {
+    filter: brightness(0.95) invert(0.05) saturate(1.1) hue-rotate(3deg);
+  }
+  75% {
+    filter: brightness(0.85) invert(0.15) saturate(1.05);
+  }
+  80% {
+    filter: brightness(0.7) invert(0.3) sepia(0.1) saturate(0.9);
+  }
+  85% {
+    filter: brightness(0.5) invert(0.5) sepia(0.15) saturate(0.7);
+  }
+  90% {
+    filter: brightness(0.2) invert(0.8) sepia(0.05);
+  }
+  95% {
+    filter: brightness(0.05) invert(0.95) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+  100% {
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Apply ultra-smooth video-like transition */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky) .navbar-brand img {
+  animation: logoVideoTransition 6s linear infinite;
+}
+
+/* Enhanced hover effect - pause animation and show white with glow */
+.navbar.navbar-modern:not(.scrolled):not(.nav-sticky) .navbar-brand:hover img {
+  animation-play-state: paused;
+  filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(242, 101, 34, 0.7));
+  transform: scale(1.05);
+}
+
+.navbar.navbar-modern .navbar-brand {
+  position: relative;
+  overflow: visible;
 }
 
 .navbar.navbar-modern .navbar-brand:hover {
-  transform: scale(1.05) rotate(-1deg);
+  transform: scale(1.05);
+}
+
+/* Logo hover effect - colorful glow */
+.navbar.navbar-modern .navbar-brand:hover img {
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(242, 101, 34, 0.6));
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Logo hover for scrolled state */
+.navbar.navbar-modern.scrolled .navbar-brand:hover img,
+.navbar.navbar-modern.nav-sticky .navbar-brand:hover img {
+  filter: saturate(1.5) brightness(1.1) drop-shadow(0 0 15px rgba(242, 101, 34, 0.4));
+  transform: scale(1.05) rotate(2deg);
 }
 
 .navbar.navbar-modern .navbar-brand img {
   height: 45px;
   width: auto;
   max-width: 200px;
-  filter: none;
-  transition: all var(--transition);
+  filter: brightness(0) invert(1); /* White logo by default */
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   object-fit: contain;
+  transform: scale(1);
 }
 
+/* Colorful logo when scrolled with rainbow effect */
+@keyframes logoColorPulse {
+  0% {
+    filter: none;
+  }
+  25% {
+    filter: hue-rotate(30deg) brightness(1.1);
+  }
+  50% {
+    filter: hue-rotate(-30deg) brightness(1.2);
+  }
+  75% {
+    filter: hue-rotate(15deg) brightness(1.1);
+  }
+  100% {
+    filter: none;
+  }
+}
+
+/* Colorful logo when scrolled */
+.navbar.navbar-modern.scrolled .navbar-brand img,
 .navbar.navbar-modern.nav-sticky .navbar-brand img {
   height: 40px;
+  filter: none; /* Show original colors */
+  transform: scale(0.95);
+  animation: logoColorPulse 4s ease-in-out infinite;
+}
+
+/* Stop color animation on hover for scrolled state */
+.navbar.navbar-modern.scrolled .navbar-brand:hover img,
+.navbar.navbar-modern.nav-sticky .navbar-brand:hover img {
+  animation: none;
 }
 
 /* Navigation Links */
