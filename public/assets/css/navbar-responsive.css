@@ -1124,8 +1124,7 @@ body {
 /* Large Desktop Optimizations */
 @media (min-width: 1200px) {
     .navbar.navbar-modern .nav-link {
-        padding: 0 16px !important;
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
     
     .navbar.navbar-modern .mega-dropdown-menu {

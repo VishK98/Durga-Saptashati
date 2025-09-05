@@ -42,39 +42,35 @@
                 <div class="top-bar-left">
                     <div class="text">
                         <i class="fa fa-phone-alt"></i>
-                        <p>+91 98765 43210</p>
+                        <p>+91 9289088161</p>
                     </div>
                     <div class="text">
                         <i class="fa fa-envelope"></i>
-                        <p>info@saptashati.org</p>
+                        <p>support@saptashati.org</p>
                     </div>
                     <div class="text">
                         <i class="fa fa-map-marker-alt"></i>
-                        <p>Mumbai, Maharashtra, India</p>
+                        <p>Dwarka, New Delhi, India</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="top-bar-right">
                     <div class="social">
-                        <a href="https://twitter.com/saptashati" target="_blank" title="Follow us on Twitter"
+                        <a href="https://x.com/Saptashati_F" target="_blank" title="Follow us on Twitter"
                             data-toggle="tooltip" data-placement="bottom">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://facebook.com/saptashati" target="_blank" title="Like us on Facebook"
-                            data-toggle="tooltip" data-placement="bottom">
+                        <a href="https://www.facebook.com/Durgasaptashati.org" target="_blank"
+                            title="Like us on Facebook" data-toggle="tooltip" data-placement="bottom">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://linkedin.com/company/saptashati" target="_blank" title="Connect on LinkedIn"
-                            data-toggle="tooltip" data-placement="bottom">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://instagram.com/saptashati" target="_blank" title="Follow us on Instagram"
+                        <a href="https://www.instagram.com/_saptashati/" target="_blank" title="Follow us on Instagram"
                             data-toggle="tooltip" data-placement="bottom">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://youtube.com/saptashati" target="_blank" title="Subscribe to our YouTube"
-                            data-toggle="tooltip" data-placement="bottom">
+                        <a href="https://www.youtube.com/channel/UCKWpbOcfN4HHrkFHmjz4l5Q" target="_blank"
+                            title="Subscribe to our YouTube" data-toggle="tooltip" data-placement="bottom">
                             <i class="fab fa-youtube"></i>
                         </a>
                         <a href="<?= url('donate.php') ?>" class="btn" title="Donate Now" data-toggle="tooltip"
@@ -113,19 +109,12 @@
                 <button class="mobile-close d-lg-none" onclick="closeMobileMenu()">
                     <i class="fas fa-times"></i>
                 </button>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="<?= url('index.php') ?>"
-                            class="nav-link <?= getCurrentPage() === 'index' ? 'active' : '' ?>">
-                            <i class="fas fa-home nav-icon"></i> Home
-                        </a>
-                    </li>
-
+                <ul class="navbar-nav mx-auto">
                     <!-- About Mega Dropdown -->
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('about.php') ?>" id="aboutDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-users nav-icon"></i> About Us
+                            About Us <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu about-mega" aria-labelledby="aboutDropdown">
                             <div class="mega-dropdown-content">
@@ -179,7 +168,7 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('service.php') ?>" id="programsDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-hands-helping nav-icon"></i> Our Programs
+                            Programs <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu programs-mega" aria-labelledby="programsDropdown">
                             <div class="mega-dropdown-content">
@@ -269,7 +258,7 @@
                     <li class="nav-item">
                         <a href="<?= url('causes.php') ?>"
                             class="nav-link <?= getCurrentPage() === 'causes' ? 'active' : '' ?>">
-                            <i class="fas fa-heart nav-icon"></i> Our Causes
+                            Causes
                         </a>
                     </li>
 
@@ -277,7 +266,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('event.php') ?>" id="activitiesDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-calendar-alt nav-icon"></i> Events & Activities
+                            Events <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="activitiesDropdown">
                             <h6 class="dropdown-header">Events & Activities</h6>
@@ -307,7 +296,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('blog.php') ?>" id="mediaDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-newspaper nav-icon"></i> News & Media
+                            News <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="mediaDropdown">
                             <h6 class="dropdown-header">Latest Updates</h6>
@@ -330,18 +319,12 @@
                         </div>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="<?= url('contact.php') ?>"
-                            class="nav-link <?= getCurrentPage() === 'contact' ? 'active' : '' ?>">
-                            <i class="fas fa-phone nav-icon"></i> Contact Us
-                        </a>
-                    </li>
 
                     <!-- Get Involved Mega Dropdown -->
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('volunteer.php') ?>" id="involvedDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-hand-holding-heart nav-icon"></i> Get Involved
+                            Get Involved <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu dropdown-menu-right involved-mega"
                             aria-labelledby="involvedDropdown">
@@ -410,13 +393,13 @@
                         </div>
                     </li>
                 </ul>
-
-                <!-- CTA Button -->
-                <a href="<?= url('donate.php') ?>" class="btn rally-btn ml-3">
-                    <span class="btn-text">Make a Difference</span>
-                    <span class="btn-icon"><i class="fas fa-heart"></i></span>
-                </a>
             </div>
+
+            <!-- CTA Button -->
+            <a href="<?= url('contact.php') ?>" class="btn rally-btn">
+                <span class="btn-text">Contact Us</span>
+                <span class="btn-icon"><i class="fas fa-phone-alt"></i></span>
+            </a>
         </div>
     </nav>
     <!-- Nav Bar End -->

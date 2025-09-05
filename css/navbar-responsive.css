@@ -26,6 +26,69 @@ body {
   position: relative;
 }
 
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* dark blue track */
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #ff8c42 100%
+  );
+  border-radius: 10px;
+  border: 2px solid rgba(26, 27, 38, 0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    #ff8c42 0%,
+    var(--primary-color) 100%
+  );
+  box-shadow: 0 2px 8px rgba(242, 101, 34, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--primary-color);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #0f172a; /* thumb color | track color */
+}
+
+/* For dropdown menus scrollbar */
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #0f172a; /* dark blue track for dropdown */
+  border-radius: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 76, 112, 0.8) 0%,
+    rgba(242, 101, 34, 0.8) 100%
+  );
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Top Bar Enhancements */
 .top-bar {
   background: linear-gradient(
@@ -92,12 +155,13 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  min-height: auto; /* allow wrapping if needed */
+  min-height: 70px;
+  height: auto;
   transition: all var(--transition);
   z-index: 1050;
   box-shadow: var(--shadow-light);
   border: none;
-  padding: 0;
+  padding: 8px 0;
   margin: 0;
 }
 
@@ -109,6 +173,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 /* Consistent container-fluid padding for all sections - Match navbar exactly */
@@ -356,8 +421,9 @@ body {
 /* Brand/Logo */
 .navbar.navbar-modern .navbar-brand {
   padding: 10px 15px 10px 0;
-  margin-right: 20px;
+  margin-right: auto;
   transition: transform var(--transition);
+  flex-shrink: 0;
 }
 
 .navbar.navbar-modern .navbar-brand:hover {
@@ -381,25 +447,28 @@ body {
 /* Navigation Links */
 .navbar.navbar-modern .navbar-nav {
   align-items: center;
-  height: auto; /* accommodate multiple rows */
+  height: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* allow items to wrap on desktop if space is tight */
-  margin: 0;
+  flex-wrap: nowrap;
+  margin: 0 auto;
   padding: 0;
+  gap: 8px;
+  justify-content: center;
 }
 
 /* Allow the collapse container to wrap its contents on desktop */
 .navbar.navbar-modern .navbar-collapse {
   display: flex !important;
   align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
 }
 
 .navbar.navbar-modern .nav-item {
   position: relative;
-  margin: 0 2px;
+  margin: 0 4px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -407,10 +476,10 @@ body {
 
 .navbar.navbar-modern .nav-link {
   color: rgba(255, 255, 255, 0.95) !important;
-  padding: 0 12px !important;
+  padding: 0 18px !important;
   font-size: 14px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   text-transform: capitalize;
   transition: all var(--transition) !important;
   position: relative;
@@ -423,13 +492,28 @@ body {
   border: none !important;
 }
 
-/* When items wrap, give CTA some breathing room */
-.navbar.navbar-modern .rally-btn {
-  margin-top: 6px;
+/* Ensure navbar items fit properly */
+@media (min-width: 992px) {
+  .navbar.navbar-modern {
+    padding: 5px 0;
+  }
+  .navbar.navbar-modern .container-fluid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+  .navbar.navbar-modern .navbar-collapse {
+    grid-column: 2;
+    justify-self: center;
+  }
+  .navbar.navbar-modern .rally-btn {
+    grid-column: 3;
+    justify-self: end;
+  }
 }
 
 .navbar.navbar-modern .nav-icon {
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.8;
   transition: all var(--transition);
 }
@@ -457,13 +541,24 @@ body {
   transform: translateX(-50%);
 }
 
-.navbar.navbar-modern .nav-link:hover::after,
-.navbar.navbar-modern .nav-link.active::after {
+/* Remove underline from dropdown links */
+.navbar.navbar-modern .dropdown .nav-link::after {
+  display: none;
+}
+
+/* Add underline only for non-dropdown links on hover */
+.navbar.navbar-modern .nav-item:not(.dropdown) .nav-link:hover::after,
+.navbar.navbar-modern .nav-item:not(.dropdown) .nav-link.active::after {
   width: calc(100% - 24px);
 }
 
 .navbar.navbar-modern .nav-link:hover {
   color: var(--primary-color) !important;
+  text-decoration: none !important;
+}
+
+.navbar.navbar-modern .dropdown .nav-link:hover {
+  text-decoration: none !important;
 }
 
 .navbar.navbar-modern .nav-link:hover .nav-icon {
@@ -477,17 +572,66 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-right: 7px;
 }
 
+/* Hide default Bootstrap dropdown arrow */
 .navbar.navbar-modern .dropdown-toggle::after {
-  margin-left: 6px;
-  font-size: 10px;
-  transition: transform var(--transition);
+  display: none !important;
 }
 
-.navbar.navbar-modern .dropdown:hover .dropdown-toggle::after,
-.navbar.navbar-modern .dropdown.show .dropdown-toggle::after {
+/* Ensure no text decoration on dropdown toggles */
+.navbar.navbar-modern .dropdown-toggle {
+  text-decoration: none !important;
+}
+
+.navbar.navbar-modern .dropdown-toggle:hover,
+.navbar.navbar-modern .dropdown-toggle:focus,
+.navbar.navbar-modern .dropdown-toggle:active {
+  text-decoration: none !important;
+}
+
+/* Custom dropdown arrow */
+.navbar.navbar-modern .dropdown-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  animation: arrowDance 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes arrowDance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(3px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(5deg);
+  }
+}
+
+.navbar.navbar-modern .dropdown:hover .dropdown-arrow,
+.navbar.navbar-modern .dropdown.show .dropdown-arrow {
   transform: rotate(180deg);
+  animation: arrowRotateUp 0.4s ease forwards;
+}
+
+@keyframes arrowRotateUp {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(90deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(180deg) translateY(0);
+  }
 }
 
 /* Dropdown Menu */
@@ -619,27 +763,28 @@ body {
 
 /* CTA Button */
 .rally-btn {
-  background: linear-gradient(135deg, #dc2626, #f87171);
+  background: linear-gradient(135deg, var(--primary-color), #ff8c42);
   color: white !important;
-  padding: 12px 26px;
-  border-radius: 28px;
-  font-size: 15px;
-  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: capitalize;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   border: none;
   position: relative;
   overflow: hidden;
   transition: all var(--transition);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.35);
-  margin-left: 20px;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(242, 101, 34, 0.35);
+  margin-left: auto;
   white-space: nowrap;
   text-decoration: none;
-  min-width: 180px;
+  min-width: 130px;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* Top-bar Donate button rounded and sized */
@@ -666,22 +811,31 @@ body {
 
 .rally-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.45);
+  box-shadow: 0 8px 25px rgba(242, 101, 34, 0.45);
   color: white !important;
   text-decoration: none;
+  background: linear-gradient(135deg, #ff8c42, var(--primary-color));
 }
 
 .rally-btn .btn-icon {
-  animation: heartbeat 1.5s ease-in-out infinite;
+  animation: phoneRing 2s ease-in-out infinite;
 }
 
-@keyframes heartbeat {
+@keyframes phoneRing {
   0%,
   100% {
-    transform: scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+  10%,
+  30% {
+    transform: rotate(-8deg) scale(1.05);
+  }
+  20%,
+  40% {
+    transform: rotate(8deg) scale(1.05);
   }
   50% {
-    transform: scale(1.1);
+    transform: rotate(0deg) scale(1);
   }
 }
 
@@ -991,6 +1145,7 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 80px 20px 40px;
+    gap: 0;
   }
 
   .navbar.navbar-modern .nav-item {
@@ -1012,6 +1167,11 @@ body {
     color: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     transition: all var(--transition) !important;
+  }
+
+  /* Hide dropdown arrows on mobile */
+  .navbar.navbar-modern .dropdown-arrow {
+    display: none !important;
   }
 
   .navbar.navbar-modern .nav-link:hover,
@@ -1219,20 +1379,40 @@ body {
 }
 
 /* Large Desktop Optimizations */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
   .navbar.navbar-modern .nav-link {
     padding: 0 16px !important;
+    font-size: 14px !important;
+  }
+  .navbar.navbar-modern .navbar-nav {
+    gap: 6px;
+  }
+  .navbar.navbar-modern .mega-dropdown-menu {
+    width: 600px;
+  }
+  .carousel .carousel-text h1 {
+    font-size: 3.5rem;
+  }
+  .carousel .carousel-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1400px) {
+  .navbar.navbar-modern .nav-link {
+    padding: 0 20px !important;
     font-size: 15px !important;
   }
-
+  .navbar.navbar-modern .navbar-nav {
+    gap: 10px;
+  }
   .navbar.navbar-modern .mega-dropdown-menu {
     width: 650px;
   }
-
   .carousel .carousel-text h1 {
     font-size: 4rem;
   }
-
   .carousel .carousel-text p {
     font-size: 1.3rem;
   }
@@ -1241,14 +1421,28 @@ body {
 /* Medium desktops and large tablets: tighten spacing to avoid overflow */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar.navbar-modern .navbar-brand {
-    margin-right: 10px;
+    margin-right: 15px;
   }
   .navbar.navbar-modern .navbar-brand img {
-    height: 38px;
+    height: 36px;
   }
   .navbar.navbar-modern .nav-link {
-    padding: 0 10px !important;
+    padding: 0 14px !important;
     font-size: 13px !important;
+  }
+  .navbar.navbar-modern .navbar-nav {
+    gap: 4px;
+  }
+  .navbar.navbar-modern .dropdown-arrow {
+    font-size: 9px;
+  }
+  .rally-btn {
+    padding: 9px 16px;
+    font-size: 13px;
+    min-width: 110px;
+  }
+  .navbar.navbar-modern .dropdown-menu {
+    min-width: 240px !important;
   }
 }
 
