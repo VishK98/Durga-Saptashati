@@ -123,7 +123,7 @@ include '../app/views/layout/header.php';
                             Durga Saptashati Foundation is dedicated to serving humanity through the divine grace of
                             Goddess Durga. We believe in the power of compassion, service, and spiritual growth to
                             transform lives and communities. Our organization works tirelessly to provide educational
-                            opportunities, healthcare services, and spiritual guidance to those in need.
+                            opportunities, healthcare services, and spiritual guidance to those in needs.
                         </div>
                         <div id="tab-content-2" class="container-fluid tab-pane fade">
                             Our mission is to spread the divine teachings of the Saptashati and serve humanity through
