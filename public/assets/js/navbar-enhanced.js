@@ -105,6 +105,19 @@ document.addEventListener('DOMContentLoaded', function() {
             toggle.addEventListener('click', function(e) {
                 if (window.innerWidth < 992) {
                     e.preventDefault();
+                    
+                    // Close all other dropdowns first
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('show');
+                            const otherMenu = other.querySelector('.dropdown-menu');
+                            if (otherMenu) {
+                                otherMenu.classList.remove('show');
+                            }
+                        }
+                    });
+                    
+                    // Toggle current dropdown
                     dropdown.classList.toggle('show');
                     if (menu) {
                         menu.classList.toggle('show');
@@ -139,18 +152,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.querySelector('#navbarCollapse');
     const mobileClose = document.querySelector('.mobile-close');
     
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.body.classList.toggle('mobile-menu-open');
+    if (mobileToggle && navbarCollapse) {
+        mobileToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Always open the menu when hamburger is clicked
+            if (!navbarCollapse.classList.contains('show')) {
+                
+                // Add classes to open menu
+                this.classList.add('active');
+                document.body.classList.add('mobile-menu-open');
+                navbarCollapse.classList.add('show');
+                
+                // Set hamburger to active state
+                this.setAttribute('aria-expanded', 'true');
+                
+                // Close all mobile dropdowns when hamburger is clicked to open
+                const allMobileDropdowns = document.querySelectorAll('.navbar .dropdown');
+                allMobileDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                    const menu = dropdown.querySelector('.dropdown-menu');
+                    if (menu) {
+                        menu.classList.remove('show');
+                    }
+                });
+            }
         });
     }
     
-    if (mobileClose) {
-        mobileClose.addEventListener('click', function() {
+    if (mobileClose && navbarCollapse && mobileToggle) {
+        mobileClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            
+            // Close the menu
             navbarCollapse.classList.remove('show');
             mobileToggle.classList.remove('active');
             document.body.classList.remove('mobile-menu-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            
+            // Close all mobile dropdowns
+            const allMobileDropdowns = document.querySelectorAll('.navbar .dropdown');
+            allMobileDropdowns.forEach(dropdown => {
+                dropdown.classList.remove('show');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                if (menu) {
+                    menu.classList.remove('show');
+                }
+            });
         });
     }
 });
@@ -160,11 +211,23 @@ function closeMobileMenu() {
     const navbarCollapse = document.querySelector('#navbarCollapse');
     const mobileToggle = document.querySelector('.navbar-toggler');
     
+    
     if (navbarCollapse) {
         navbarCollapse.classList.remove('show');
     }
     if (mobileToggle) {
         mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
     }
     document.body.classList.remove('mobile-menu-open');
+    
+    // Close all mobile dropdowns
+    const allMobileDropdowns = document.querySelectorAll('.navbar .dropdown');
+    allMobileDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('show');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        if (menu) {
+            menu.classList.remove('show');
+        }
+    });
 }

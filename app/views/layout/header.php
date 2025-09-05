@@ -95,7 +95,7 @@
             </a>
 
             <!-- Modern Hamburger Menu -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            <button class="navbar-toggler" type="button" 
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -107,17 +107,18 @@
                 <div class="mobile-menu-header d-lg-none">
                     <img src="<?= asset('images/logo-wide.webp') ?>" alt="Durga Saptashati Foundation"
                         class="mobile-menu-logo">
+                    <!-- Mobile Close Button -->
+                    <button class="mobile-close" onclick="closeMobileMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-                <!-- Mobile Close Button -->
-                <button class="mobile-close d-lg-none" onclick="closeMobileMenu()">
-                    <i class="fas fa-times"></i>
-                </button>
                 <ul class="navbar-nav mx-auto">
                     <!-- About Mega Dropdown -->
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('about.php') ?>" id="aboutDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            About Us <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">About Us</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu about-mega" aria-labelledby="aboutDropdown">
                             <div class="mega-dropdown-content">
@@ -179,7 +180,8 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('service.php') ?>" id="programsDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Programs <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">Programs</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu programs-mega" aria-labelledby="programsDropdown">
                             <div class="mega-dropdown-content">
@@ -281,7 +283,8 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('causes.php') ?>" id="causesDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Causes <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">Causes</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu causes-mega" aria-labelledby="causesDropdown">
                             <div class="mega-dropdown-content">
@@ -363,7 +366,8 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('event.php') ?>" id="eventsDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Events <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">Events</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu events-mega" aria-labelledby="eventsDropdown">
                             <div class="mega-dropdown-content">
@@ -450,7 +454,8 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('blog.php') ?>" id="newsDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            News <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">News</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu news-mega" aria-labelledby="newsDropdown">
                             <div class="mega-dropdown-content">
@@ -515,7 +520,8 @@
                     <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link dropdown-toggle" href="<?= url('volunteer.php') ?>" id="involvedDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Get Involved <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            <span class="nav-text">Get Involved</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu mega-dropdown-menu dropdown-menu-right involved-mega"
                             aria-labelledby="involvedDropdown">
@@ -584,10 +590,18 @@
                         </div>
                     </li>
                 </ul>
+                
+                <!-- Mobile CTA Button - Inside Mobile Menu -->
+                <div class="mobile-cta-wrapper d-lg-none">
+                    <a href="<?= url('contact.php') ?>" class="btn rally-btn mobile-cta-btn">
+                        <span class="btn-text">Contact Us</span>
+                        <span class="btn-icon"><i class="fas fa-phone-alt"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <!-- CTA Button -->
-            <a href="<?= url('contact.php') ?>" class="btn rally-btn">
+            <!-- Desktop CTA Button -->
+            <a href="<?= url('contact.php') ?>" class="btn rally-btn d-none d-lg-flex">
                 <span class="btn-text">Contact Us</span>
                 <span class="btn-icon"><i class="fas fa-phone-alt"></i></span>
             </a>
