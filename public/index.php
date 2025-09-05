@@ -119,25 +119,43 @@ include '../app/views/layout/header.php';
                     </ul>
 
                     <div class="tab-content">
-                        <div id="tab-content-1" class="container-fluid tab-pane active">
-                            Durga Saptashati Foundation is dedicated to serving humanity through the divine grace of
-                            Goddess Durga. We believe in the power of compassion, service, and spiritual growth to
-                            transform lives and communities. Our organization works tirelessly to provide educational
-                            opportunities, healthcare services, and spiritual guidance to those in needs.
+                        <div id="tab-content-1" class="tab-pane active donate-text">
+                            <p>
+                                Durga Saptashati Foundation is dedicated to serving humanity through the divine grace of
+                                Goddess Durga. We believe in the power of compassion, service, and spiritual growth to
+                                transform lives and communities. Our organization works tirelessly to provide
+                                educational
+                                opportunities, healthcare services, and spiritual guidance to those in need.
+                            </p>
                         </div>
-                        <div id="tab-content-2" class="container-fluid tab-pane fade">
-                            Our mission is to spread the divine teachings of the Saptashati and serve humanity through
-                            various charitable activities. We aim to provide education, healthcare, spiritual guidance,
-                            and social support to underprivileged communities, fostering personal growth and societal
-                            well-being through the blessings of Durga Ma.
+                        <div id="tab-content-2" class="tab-pane fade donate-text">
+                            <p>
+                                At Durga Saptashati Foundation, our mission is rooted in the sacred teachings of the
+                                Saptashati,
+                                inspiring us to extend love, care, and service to all. We are committed to empowering
+                                the
+                                underprivileged through access to education, essential healthcare, and spiritual
+                                upliftment.
+                                Guided by the divine energy of Goddess Durga, we organize charitable initiatives that
+                                support
+                                families in need and encourage personal transformation through devotion and service.
+                            </p>
                         </div>
-                        <div id="tab-content-3" class="container-fluid tab-pane fade">
-                            We envision a world where every individual has access to education, healthcare, and
-                            spiritual enlightenment. Through the grace of the Divine Mother, we strive to create a
-                            society based on compassion, equality, and service, where everyone can realize their full
-                            potential and contribute to the greater good.
+                        <div id="tab-content-3" class="tab-pane fade donate-text">
+                            <p>
+                                We envision a compassionate world illuminated by the grace of the Divine Mother, where
+                                every soul
+                                is nurtured with knowledge, wellness, and spiritual awakening. Durga Saptashati
+                                Foundation is
+                                devoted to creating lasting impact by fostering equality, uplifting marginalized
+                                communities,
+                                and promoting values of unity and service. Through the blessings of Durga Ma, we strive
+                                to build
+                                a harmonious society where every individual can flourish with dignity and purpose.
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

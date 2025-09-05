@@ -34,11 +34,19 @@
     <link href="<?= asset('css/navbar-responsive.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/mobile-navbar.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/hero-slider.css') ?>" rel="stylesheet">
+    <!-- Global Typography & Animation System -->
+    <link href="<?= asset('css/global-typography-animations.css') ?>" rel="stylesheet">
+    <!-- Page-Level Enhancements -->
+    <link href="<?= asset('css/page-enhancements.css') ?>" rel="stylesheet">
+    <!-- Typography Overrides for Compact Styling -->
+    <link href="<?= asset('css/typography-overrides.css') ?>" rel="stylesheet">
 
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
     <!-- Hero Slider JavaScript -->
     <script src="<?= asset('js/hero-slider.js') ?>" defer></script>
+    <!-- Global Animation Controller -->
+    <script src="<?= asset('js/global-animations.js') ?>" defer></script>
 </head>
 
 <body>
