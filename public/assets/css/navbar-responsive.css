@@ -573,7 +573,7 @@ body {
 .mega-dropdown-content {
     max-width: 1366px;
     margin: 0 auto;
-    padding: 40px 45px;
+    padding: 20px 45px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
@@ -1498,6 +1498,28 @@ body.mobile-menu-open {
 
 .mega-featured-section h5 i {
     color: var(--primary-color);
+}
+
+/* Subscribe Button in Mega Menu */
+.mega-featured-section .btn-primary,
+.mega-dropdown-content .btn-primary {
+    background: var(--dark-bg) !important;
+    border: none !important;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mega-featured-section .btn-primary:hover,
+.mega-dropdown-content .btn-primary:hover {
+    background: var(--secondary-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 27, 38, 0.3);
 }
 
 /* Quick Stats in Dropdown */
