@@ -33,6 +33,7 @@
     <link href="<?= asset('css/style.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/navbar-responsive.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/mobile-navbar.css') ?>" rel="stylesheet">
+    <link href="<?= asset('css/hero-slider.css') ?>" rel="stylesheet">
 
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>

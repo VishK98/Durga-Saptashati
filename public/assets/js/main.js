@@ -53,20 +53,39 @@
     });
 
     
-    // Main carousel
+    // Enhanced Main carousel with auto-switching and smooth animations
     $(".carousel .owl-carousel").owlCarousel({
         autoplay: true,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 1200,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         items: 1,
-        smartSpeed: 300,
+        smartSpeed: 1200,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
-            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        ]
+        nav: true,
+        navSpeed: 800,
+        dragEndSpeed: 800,
+        navText: [
+            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+        ],
+        onInitialized: function(event) {
+            // Reset animations on slide change
+            $('.carousel .carousel-text').addClass('animate-reset');
+            setTimeout(function() {
+                $('.carousel .carousel-text').removeClass('animate-reset');
+            }, 100);
+        },
+        onChanged: function(event) {
+            // Trigger re-animation on slide change
+            $('.carousel .carousel-text, .carousel .carousel-text h1, .carousel .carousel-text p, .carousel .carousel-btn').addClass('animate-reset');
+            setTimeout(function() {
+                $('.carousel .carousel-text, .carousel .carousel-text h1, .carousel .carousel-text p, .carousel .carousel-btn').removeClass('animate-reset');
+            }, 200);
+        }
     });
     
     
