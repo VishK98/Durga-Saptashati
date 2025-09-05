@@ -11,10 +11,10 @@ include '../app/views/layout/header.php';
 <!-- Carousel Start -->
 <div class="carousel">
     <div class="container-fluid">
-        <div class="owl-carousel">
+        <div class="owl-carousel owl-theme">
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel/carousel.webp'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel.webp'); ?>" alt="Helping Children">
                 </div>
                 <div class="carousel-text">
                     <h1>Let's be kind for children</h1>
@@ -32,7 +32,7 @@ include '../app/views/layout/header.php';
             </div>
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel/carousel-1.webp'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel-1.webp'); ?>" alt="Helping Hand">
                 </div>
                 <div class="carousel-text">
                     <h1>Get Involved with helping hand</h1>
@@ -50,7 +50,7 @@ include '../app/views/layout/header.php';
             </div>
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo asset('img/carousel/carousel-2.webp'); ?>" alt="Image">
+                    <img src="<?php echo asset('img/carousel/carousel-2.webp'); ?>" alt="Bringing Smiles">
                 </div>
                 <div class="carousel-text">
                     <h1>Bringing smiles to millions</h1>

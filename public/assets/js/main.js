@@ -52,59 +52,9 @@
         $(window).resize(toggleNavbarMethod);
     });
 
+    // Hero slider JavaScript moved to hero-slider.js
     
-    // Enhanced Main carousel with auto-switching and smooth animations
-    $(".carousel .owl-carousel").owlCarousel({
-        autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        autoplaySpeed: 1200,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        items: 1,
-        smartSpeed: 1200,
-        dots: false,
-        loop: true,
-        nav: true,
-        navSpeed: 800,
-        dragEndSpeed: 800,
-        navText: [
-            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
-        ],
-        onInitialized: function(event) {
-            // Reset animations on slide change
-            $('.carousel .carousel-text').addClass('animate-reset');
-            setTimeout(function() {
-                $('.carousel .carousel-text').removeClass('animate-reset');
-            }, 100);
-        },
-        onChanged: function(event) {
-            // Trigger re-animation on slide change
-            $('.carousel .carousel-text, .carousel .carousel-text h1, .carousel .carousel-text p, .carousel .carousel-btn').addClass('animate-reset');
-            setTimeout(function() {
-                $('.carousel .carousel-text, .carousel .carousel-text h1, .carousel .carousel-text p, .carousel .carousel-btn').removeClass('animate-reset');
-            }, 200);
-        }
-    });
-    
-    
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
-    });
+    // Video modal functionality moved to hero-slider.js
     
     
     // Causes carousel

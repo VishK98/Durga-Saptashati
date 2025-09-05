@@ -37,6 +37,8 @@
 
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
+    <!-- Hero Slider JavaScript -->
+    <script src="<?= asset('js/hero-slider.js') ?>" defer></script>
 </head>
 
 <body>

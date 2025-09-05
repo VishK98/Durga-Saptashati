@@ -699,12 +699,32 @@ body {
   display: block !important;
 }
 
-/* Mega dropdown specific hover - prevent disappearing */
+/* Ultra-smooth mega dropdown hover with professional transitions */
 .navbar.navbar-modern .mega-dropdown:hover .mega-dropdown-menu,
 .navbar.navbar-modern .mega-dropdown .mega-dropdown-menu:hover {
   opacity: 1 !important;
   visibility: visible !important;
   display: block !important;
+  transform: translateY(0) !important;
+  animation: megaDropInUltraSmooth 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+@keyframes megaDropInUltraSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.96);
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(0.99);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
 /* Mega Dropdown Enhanced - Full Width */
@@ -761,8 +781,10 @@ body {
 .mega-dropdown-content {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 20px 45px;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 25px 50px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0 0 20px 20px;
 }
 
 .mega-dropdown-content .row {
@@ -774,15 +796,93 @@ body {
   position: relative;
 }
 
-/* Column separators */
+/* Column separators with enhanced styling */
 .mega-dropdown-content [class*="col-"]:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 20px;
-  bottom: 20px;
+  top: 25px;
+  bottom: 25px;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, #e0e0e0, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(242, 101, 34, 0.2), transparent);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.mega-dropdown-content:hover [class*="col-"]:not(:last-child)::after {
+  opacity: 1;
+}
+
+/* Staggered animation for dropdown items when mega menu opens */
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item {
+  animation: dropdownItemStagger 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-item:nth-child(n+6) {
+  animation-delay: 0.35s;
+}
+
+@keyframes dropdownItemStagger {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced mega dropdown headers with better styling */
+.navbar.navbar-modern .dropdown-header {
+  color: var(--secondary-color) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  letter-spacing: 0.8px;
+  padding: 10px 15px 8px !important;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 12px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar.navbar-modern .dropdown-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(242, 101, 34, 0.1), transparent);
+  transition: left 0.8s ease;
+}
+
+.navbar.navbar-modern .mega-dropdown:hover .dropdown-header::before {
+  left: 100%;
 }
 
 /* Mega dropdown images */
@@ -878,7 +978,7 @@ body {
   border: none !important;
 }
 
-/* Icon positioning */
+/* Enhanced icon positioning with hover animation */
 .navbar.navbar-modern .dropdown-item i {
   color: var(--primary-color);
   font-size: 16px;
@@ -887,6 +987,21 @@ body {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: drop-shadow(0 1px 2px rgba(242, 101, 34, 0.2));
+}
+
+.navbar.navbar-modern .dropdown-item:hover i {
+  transform: scale(1.15) rotate(-5deg);
+  color: var(--primary-color);
+  filter: drop-shadow(0 2px 6px rgba(242, 101, 34, 0.4));
+  animation: iconPulse 0.6s ease-out;
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(1.15) rotate(-5deg); }
+  50% { transform: scale(1.25) rotate(0deg); }
+  100% { transform: scale(1.15) rotate(-5deg); }
 }
 
 /* Title text styling */
@@ -900,12 +1015,17 @@ body {
 .navbar.navbar-modern .dropdown-item:hover {
   background: linear-gradient(
     135deg,
-    rgba(242, 101, 34, 0.1),
-    rgba(74, 76, 112, 0.05)
+    rgba(242, 101, 34, 0.15),
+    rgba(74, 76, 112, 0.12)
   ) !important;
   color: var(--primary-color) !important;
-  transform: translateX(4px);
-  padding-left: 24px !important;
+  transform: translateX(8px) scale(1.03);
+  padding-left: 28px !important;
+  border-radius: 10px !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.20), 0 2px 8px rgba(242, 101, 34, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(242, 101, 34, 0.1);
 }
 
 .navbar.navbar-modern .dropdown-item:focus,
@@ -940,7 +1060,9 @@ body {
 .navbar.navbar-modern .dropdown-item:hover div small {
   opacity: 1;
   color: var(--secondary-color);
-  margin-left: 36px;
+  margin-left: 38px;
+  transform: translateX(2px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* CTA Button */
@@ -1611,8 +1733,10 @@ body {
 }
 
 .navbar.navbar-modern .dropdown-item:hover i {
-  transform: rotate(360deg) scale(1.2);
+  transform: rotate(360deg) scale(1.15);
   color: var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: drop-shadow(0 2px 4px rgba(242, 101, 34, 0.3));
 }
 
 /* Special CTAs in Mega Menu */
