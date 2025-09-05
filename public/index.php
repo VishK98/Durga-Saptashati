@@ -2,7 +2,8 @@
 require_once '../app/config/config.php';
 
 $pageTitle = "Home - " . APP_NAME;
-$metaDescription = "Durga Saptashati Foundation - A non-profit organization dedicated to serving humanity through various charitable activities, education, healthcare, and social welfare.";
+$pageDescription = "Durga Saptashati Foundation - A non-profit organization dedicated to serving humanity through various charitable activities, education, healthcare, and social welfare.";
+$pageKeywords = "Durga Saptashati, NGO, charity, donate, volunteer, education, healthcare, community development, women empowerment, spiritual, India";
 
 include '../app/views/layout/header.php';
 ?>

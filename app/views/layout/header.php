@@ -8,10 +8,10 @@
     </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta
-        content="NGO, Charity, Durga Saptashati, Foundation, Women Empowerment, Education, Healthcare, Community Development"
+        content="<?= isset($pageKeywords) ? $pageKeywords : 'NGO, Charity, Durga Saptashati, Foundation, Women Empowerment, Education, Healthcare, Community Development' ?>"
         name="keywords">
     <meta
-        content="<?= isset($pageDescription) ? $pageDescription : 'Durga Saptashati Foundation is dedicated to empowering communities through education, healthcare, women empowerment, and sustainable development programs across India.' ?>"
+        content="<?= isset($pageDescription) ? $pageDescription : (isset($metaDescription) ? $metaDescription : 'Durga Saptashati Foundation is dedicated to empowering communities through education, healthcare, women empowerment, and sustainable development programs across India.') ?>"
         name="description">
     <meta name="author" content="Durga Saptashati Foundation">
 
@@ -37,49 +37,50 @@
 <body>
     <!-- Header Top Bar Start -->
     <div class="top-bar d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="top-bar-left">
-                        <div class="text">
-                            <i class="fa fa-phone-alt"></i>
-                            <p>+91 98765 43210</p>
-                        </div>
-                        <div class="text">
-                            <i class="fa fa-envelope"></i>
-                            <p>info@saptashati.org</p>
-                        </div>
-                        <div class="text">
-                            <i class="fa fa-map-marker-alt"></i>
-                            <p>Mumbai, Maharashtra, India</p>
-                        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-bar-left">
+                    <div class="text">
+                        <i class="fa fa-phone-alt"></i>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="text">
+                        <i class="fa fa-envelope"></i>
+                        <p>info@saptashati.org</p>
+                    </div>
+                    <div class="text">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <p>Mumbai, Maharashtra, India</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="top-bar-right">
-                        <div class="social">
-                            <a href="https://twitter.com/saptashati" target="_blank" title="Follow us on Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://facebook.com/saptashati" target="_blank" title="Like us on Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://linkedin.com/company/saptashati" target="_blank"
-                                title="Connect on LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://instagram.com/saptashati" target="_blank" title="Follow us on Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://youtube.com/saptashati" target="_blank" title="Subscribe to our YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                        <div class="top-bar-cta">
-                            <a href="<?= url('donate.php') ?>" class="btn btn-sm btn-primary">
-                                <i class="fas fa-heart"></i> Donate Now
-                            </a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="top-bar-right">
+                    <div class="social">
+                        <a href="https://twitter.com/saptashati" target="_blank" title="Follow us on Twitter"
+                            data-toggle="tooltip" data-placement="bottom">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/saptashati" target="_blank" title="Like us on Facebook"
+                            data-toggle="tooltip" data-placement="bottom">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/saptashati" target="_blank" title="Connect on LinkedIn"
+                            data-toggle="tooltip" data-placement="bottom">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/saptashati" target="_blank" title="Follow us on Instagram"
+                            data-toggle="tooltip" data-placement="bottom">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/saptashati" target="_blank" title="Subscribe to our YouTube"
+                            data-toggle="tooltip" data-placement="bottom">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="<?= url('donate.php') ?>" class="btn" title="Donate Now" data-toggle="tooltip"
+                            data-placement="bottom">
+                            <i class="fas fa-heart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -88,8 +89,8 @@
     <!-- Header Top Bar End -->
 
     <!-- Nav Bar Start -->
-    <nav class="navbar navbar-expand-lg navbar-modern p-lg-2">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-modern">
+        <div class="container-fluid px-3 px-md-4">
             <a href="<?= url('index.php') ?>" class="navbar-brand">
                 <img src="<?= asset('images/logo-wide.webp') ?>" alt="Durga Saptashati Foundation">
             </a>
