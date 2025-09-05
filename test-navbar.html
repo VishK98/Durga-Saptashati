@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .test-content {
+            height: 200vh;
+            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+            padding: 20px;
+        }
+        .scroll-indicator {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 2000;
+        }
+        .section {
+            padding: 100px 0;
+            margin: 50px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="top-bar-left">
+                        <div class="text">
+                            <i class="fa fa-phone-alt"></i>
+                            <p>+123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-modern p-lg-2">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="https://via.placeholder.com/150x40/FF6522/FFFFFF?text=LOGO" alt="Logo">
+            </a>
+            
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Test Content -->
+    <div class="test-content">
+        <div class="section">
+            <h2>Section 1 - Test Sticky Navbar</h2>
+            <p>Scroll down to see the navbar become sticky. The navbar should:
+            <br>1. Be positioned normally at the top
+            <br>2. Become fixed when you scroll past the trigger point
+            <br>3. Hide when scrolling down fast (desktop only)
+            <br>4. Show when scrolling up</p>
+        </div>
+
+        <div class="section">
+            <h2>Section 2 - More Content</h2>
+            <p>Continue scrolling to test the navbar behavior...</p>
+        </div>
+
+        <div class="section">
+            <h2>Section 3 - Final Test</h2>
+            <p>The navbar should work smoothly throughout the entire scroll.</p>
+        </div>
+    </div>
+
+    <!-- Scroll Position Indicator -->
+    <div class="scroll-indicator">
+        Scroll: <span id="scrollPos">0</span>px
+    </div>
+
+    <!-- Load CSS and JS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="css/navbar-responsive.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar-enhanced.js"></script>
+
+    <script>
+        // Show scroll position for debugging
+        window.addEventListener('scroll', function() {
+            document.getElementById('scrollPos').textContent = Math.round(window.pageYOffset);
+        });
+    </script>
+</body>
+</html>

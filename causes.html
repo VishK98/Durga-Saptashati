@@ -22,6 +22,7 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/navbar-responsive.css" rel="stylesheet">
     </head>
 
     <body>
@@ -56,36 +57,151 @@
         </div>
         <!-- Top Bar End -->
 
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+                                                <!-- Nav Bar Start -->
+        <nav class="navbar navbar-expand-lg navbar-modern p-lg-2">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand"><img src="https://www.saptashati.org/images/logo-wide.png" alt="Durga Saptashati Foundation"></a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                <a href="index.html" class="navbar-brand">
+                    <img src="https://www.saptashati.org/images/logo-wide.png" alt="Durga Saptashati Foundation">
+                </a>
+                
+                <!-- Modern Hamburger Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="causes.html" class="nav-item nav-link active">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu">
-                                <a href="single.html" class="dropdown-item">Detail Page</a>
-                                <a href="service.html" class="dropdown-item">What We Do</a>
-                                <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- Mobile Menu Header -->
+                    <div class="mobile-menu-header d-lg-none">
+                        <img src="https://www.saptashati.org/images/logo-wide.png" alt="Durga Saptashati Foundation" class="mobile-menu-logo">
                     </div>
+                    <!-- Mobile Close Button -->
+                    <button class="mobile-close d-lg-none" onclick="closeMobileMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home nav-icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="fas fa-users nav-icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="event.html" class="nav-link">
+                                <i class="fas fa-calendar-alt nav-icon"></i> Events
+                            </a>
+                        </li>
+                        
+                        <!-- Our Causes Dropdown -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="causeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-hands-helping nav-icon"></i> Our Causes
+                            </a>
+                            <div class="dropdown-menu mega-dropdown-menu" aria-labelledby="causeDropdown">
+                                <div class="mega-dropdown-content">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h6 class="dropdown-header">Empowerment Programs</h6>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-venus"></i> Women's Empowerment
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-graduation-cap"></i> Education for Every Kids
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-briefcase"></i> Livelihood
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-utensils"></i> No People Hungry
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="dropdown-header">Special Events</h6>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-om"></i> Yoga Day
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-female"></i> International Women's Day
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-palette"></i> Painting Competition
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fas fa-theater-masks"></i> Cultural Programme
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="fas fa-chart-line nav-icon"></i> Investor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-images nav-icon"></i> Gallery
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">
+                                <i class="fas fa-blog nav-icon"></i> Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="fas fa-envelope nav-icon"></i> Contact Us
+                            </a>
+                        </li>
+                        
+                        <!-- Join Us Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-hand-holding-heart nav-icon"></i> Join Us
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right join-dropdown" aria-labelledby="joinDropdown">
+                                <a class="dropdown-item" href="volunteer.html">
+                                    <i class="fas fa-user-plus"></i>
+                                    <div>
+                                        <strong>Volunteer Application</strong>
+                                        <small>Join our team of volunteers</small>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-id-card"></i>
+                                    <div>
+                                        <strong>Membership Form</strong>
+                                        <small>Become a member</small>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="donate.html">
+                                    <i class="fas fa-donate"></i>
+                                    <div>
+                                        <strong>Donation Form</strong>
+                                        <small>Support our cause</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!-- CTA Button -->
+                    <a href="donate.html" class="btn rally-btn ml-3">
+                        <span class="btn-text">Make a Difference</span>
+                        <span class="btn-icon"><i class="fas fa-heart"></i></span>
+                    </a>
                 </div>
             </div>
-        </div>
+        </nav>
         <!-- Nav Bar End -->
         
         
@@ -383,5 +499,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/navbar-enhanced.js"></script>
     </body>
 </html>
