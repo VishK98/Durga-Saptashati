@@ -32,7 +32,8 @@
     <!-- Template Stylesheet -->
     <link href="<?= asset('css/style.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/navbar-responsive.css') ?>" rel="stylesheet">
-    
+    <link href="<?= asset('css/mobile-navbar.css') ?>" rel="stylesheet">
+
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
 </head>
@@ -95,8 +96,8 @@
             </a>
 
             <!-- Modern Hamburger Menu -->
-            <button class="navbar-toggler" type="button" 
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -137,7 +138,8 @@
                                         <h6 class="dropdown-header">Organization</h6>
                                         <a class="dropdown-item" href="<?= url('about.php') ?>">
                                             <i class="fas fa-heart"></i> Our Story & History
-                                            <span class="item-description">Learn about our journey and founding principles</span>
+                                            <span class="item-description">Learn about our journey and founding
+                                                principles</span>
                                         </a>
                                         <a class="dropdown-item" href="<?= url('about.php#mission') ?>">
                                             <i class="fas fa-eye"></i> Vision & Mission
@@ -149,18 +151,21 @@
                                         </a>
                                         <a class="dropdown-item" href="<?= url('about.php#achievements') ?>">
                                             <i class="fas fa-award"></i> Our Achievements
-                                            <span class="item-description">Milestones and recognition over the years</span>
+                                            <span class="item-description">Milestones and recognition over the
+                                                years</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Transparency</h6>
                                         <a class="dropdown-item" href="<?= url('about.php#reports') ?>">
                                             <i class="fas fa-file-alt"></i> Annual Reports
-                                            <span class="item-description">Detailed yearly activity and impact reports</span>
+                                            <span class="item-description">Detailed yearly activity and impact
+                                                reports</span>
                                         </a>
                                         <a class="dropdown-item" href="<?= url('about.php#financials') ?>">
                                             <i class="fas fa-chart-pie"></i> Financial Reports
-                                            <span class="item-description">Complete financial transparency and audits</span>
+                                            <span class="item-description">Complete financial transparency and
+                                                audits</span>
                                         </a>
                                         <a class="dropdown-item" href="<?= url('about.php#certifications') ?>">
                                             <i class="fas fa-certificate"></i> Certifications
@@ -205,7 +210,8 @@
                                         </a>
                                         <a class="dropdown-item" href="<?= url('service.php#digital') ?>">
                                             <i class="fas fa-laptop"></i> Digital Learning
-                                            <span class="item-description">Computer education and online resources</span>
+                                            <span class="item-description">Computer education and online
+                                                resources</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-3">
@@ -263,7 +269,8 @@
                                         <h6 class="dropdown-header">Community Development</h6>
                                         <a class="dropdown-item" href="<?= url('service.php#rural') ?>">
                                             <i class="fas fa-home"></i> Rural Development
-                                            <span class="item-description">Infrastructure and facilities for villages</span>
+                                            <span class="item-description">Infrastructure and facilities for
+                                                villages</span>
                                         </a>
                                         <a class="dropdown-item" href="<?= url('service.php#environment') ?>">
                                             <i class="fas fa-tree"></i> Environment Care
@@ -302,7 +309,8 @@
                                             </a>
                                             <a class="dropdown-item featured" href="<?= url('causes.php#disaster') ?>">
                                                 <i class="fas fa-house-damage"></i> Disaster Response
-                                                <span class="item-description">Immediate relief for affected families</span>
+                                                <span class="item-description">Immediate relief for affected
+                                                    families</span>
                                             </a>
                                         </div>
                                     </div>
@@ -310,7 +318,8 @@
                                         <h6 class="dropdown-header">Active Campaigns</h6>
                                         <a class="dropdown-item" href="<?= url('causes.php#education') ?>">
                                             <i class="fas fa-graduation-cap"></i> Education for All
-                                            <span class="item-description">Help 500 children get quality education</span>
+                                            <span class="item-description">Help 500 children get quality
+                                                education</span>
                                         </a>
                                         <a class="dropdown-item" href="<?= url('causes.php#hunger') ?>">
                                             <i class="fas fa-utensils"></i> Zero Hunger
@@ -374,7 +383,7 @@
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="mega-image">
-                                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=200&fit=crop" 
+                                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=200&fit=crop"
                                                 alt="Events" class="img-fluid rounded">
                                             <div class="mega-image-overlay">
                                                 <h6>Join Our Events</h6>
@@ -507,7 +516,8 @@
                                         <div class="mega-featured-section mt-3">
                                             <h5><i class="fas fa-rss"></i> Subscribe</h5>
                                             <p class="small">Get latest updates delivered to your inbox</p>
-                                            <a href="<?= url('subscribe.php') ?>" class="btn btn-sm btn-primary btn-block">Subscribe Now</a>
+                                            <a href="<?= url('subscribe.php') ?>"
+                                                class="btn btn-sm btn-primary btn-block">Subscribe Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -590,7 +600,7 @@
                         </div>
                     </li>
                 </ul>
-                
+
                 <!-- Mobile CTA Button - Inside Mobile Menu -->
                 <div class="mobile-cta-wrapper d-lg-none">
                     <a href="<?= url('contact.php') ?>" class="btn rally-btn mobile-cta-btn">
