@@ -1,0 +1,386 @@
+/* =====================================================
+   Leadership Page Styles - Durga Saptashati Foundation
+   ===================================================== */
+
+/* Leadership Main Section */
+.leadership-section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+/* Welcome Header */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.welcome-header h1 {
+    font-size: 42px;
+    color: #1a1b26;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-brand {
+    background: linear-gradient(135deg, #f26522, #ff8c42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.welcome-subtitle {
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.title-underline {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, #f26522, #ff8c42);
+    margin: 20px auto;
+    position: relative;
+}
+
+.title-underline::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #f26522;
+    border-radius: 50%;
+}
+
+.title-underline::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #f26522;
+    border-radius: 50%;
+}
+
+/* Leadership Content */
+.story-content {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.highlight-text {
+    font-size: 20px;
+    color: #f26522;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-text i {
+    font-size: 24px;
+}
+
+.story-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Leadership Cards */
+.story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.story-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f26522, #ff8c42);
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(242, 101, 34, 0.15);
+}
+
+.story-card i {
+    font-size: 48px;
+    color: #f26522;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.story-card h3 {
+    font-size: 22px;
+    color: #1a1b26;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.story-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(
+        135deg,
+        rgba(242, 101, 34, 0.05),
+        rgba(255, 255, 255, 0.95)
+    );
+    border-radius: 20px;
+    padding: 50px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mission-image {
+    flex: 0 0 450px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-title {
+    font-size: 32px;
+    color: #1a1b26;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mission-title i {
+    color: #f26522;
+    font-size: 36px;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1b26;
+    margin-bottom: 15px;
+}
+
+.header-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #f26522, #ff8c42);
+    margin: 0 auto;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 60px 0;
+    background: linear-gradient(
+        135deg,
+        rgba(242, 101, 34, 0.1),
+        rgba(255, 255, 255, 0.9)
+    );
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1b26;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, #f26522, #ff8c42);
+    color: white;
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(242, 101, 34, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.cta-btn.secondary {
+    background: white;
+    color: #f26522;
+    border: 2px solid #f26522;
+}
+
+.cta-btn.secondary:hover {
+    background: #f26522;
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Responsive Styles for Leadership Page */
+@media (max-width: 991px) {
+    .mission-content {
+        flex-direction: column-reverse;
+    }
+
+    .mission-image {
+        flex: 1;
+        width: 100%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-header h1 {
+        font-size: 32px;
+    }
+    
+    .story-content {
+        padding: 25px;
+    }
+    
+    .mission-section {
+        padding: 30px;
+    }
+
+    .mission-title {
+        font-size: 28px;
+    }
+
+    .story-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .welcome-header h1 {
+        font-size: 28px;
+    }
+    
+    .story-content {
+        padding: 20px;
+    }
+    
+    .mission-section {
+        padding: 20px;
+    }
+
+    .mission-title {
+        font-size: 24px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .story-card {
+        padding: 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-underline::before,
+    .title-underline::after {
+        display: none;
+    }
+
+    .highlight-text {
+        font-size: 18px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mission-image img {
+        height: 300px;
+    }
+}

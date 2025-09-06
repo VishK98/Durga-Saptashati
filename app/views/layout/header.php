@@ -42,8 +42,19 @@
     <link href="<?= asset('css/typography-overrides.css') ?>" rel="stylesheet">
     <!-- Coming Soon Pages Stylesheet -->
     <link href="<?= asset('css/coming-soon.css') ?>" rel="stylesheet">
-    <!-- About Us Pages Stylesheet -->
-    <link href="<?= asset('css/about-us.css') ?>" rel="stylesheet">
+    <!-- About Us Pages Stylesheets -->
+    <?php
+    $currentPage = basename($_SERVER['PHP_SELF'], '.php');
+    $aboutUsPages = [
+        'achievements' => 'about-us/achievements.css',
+        'our-story' => 'about-us/our-story.css', 
+        'leadership' => 'about-us/leadership.css'
+    ];
+    
+    if (isset($aboutUsPages[$currentPage])) {
+        echo '<link href="' . asset('css/' . $aboutUsPages[$currentPage]) . '" rel="stylesheet">';
+    }
+    ?>
 
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
