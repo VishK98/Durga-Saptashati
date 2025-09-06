@@ -1,12 +1,8 @@
-.coming-soon-section {
-    padding: 60px 0;
-    background: #ffffff;
-}
 
 .coming-soon-card {
     background: white;
     border-radius: 15px;
-    padding: 40px 30px;
+    padding: 20px 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #f0f0f0;
     text-align: center;

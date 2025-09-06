@@ -305,15 +305,17 @@
                                     <div class="col-lg-3">
                                         <div class="mega-featured-section">
                                             <h5><i class="fas fa-fire"></i> Urgent Causes</h5>
-                                            <a class="dropdown-item featured" href="<?= url('causes.php#urgent') ?>">
+                                            <a class="dropdown-item featured" href="<?= url('urgent-causes.php') ?>">
                                                 <i class="fas fa-exclamation-triangle"></i> Emergency Relief
                                                 <span class="feature-badge hot">URGENT</span>
                                             </a>
-                                            <a class="dropdown-item featured" href="<?= url('causes.php#medical') ?>">
+                                            <a class="dropdown-item featured"
+                                                href="<?= url('medical-emergencies.php') ?>">
                                                 <i class="fas fa-heartbeat"></i> Medical Emergencies
                                                 <span class="item-description">Critical healthcare support needed</span>
                                             </a>
-                                            <a class="dropdown-item featured" href="<?= url('causes.php#disaster') ?>">
+                                            <a class="dropdown-item featured"
+                                                href="<?= url('disaster-response.php') ?>">
                                                 <i class="fas fa-house-damage"></i> Disaster Response
                                                 <span class="item-description">Immediate relief for affected
                                                     families</span>
@@ -322,37 +324,33 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <h6 class="dropdown-header">Active Campaigns</h6>
-                                        <a class="dropdown-item" href="<?= url('causes.php#education') ?>">
+                                        <a class="dropdown-item" href="<?= url('education-for-all.php') ?>">
                                             <i class="fas fa-graduation-cap"></i> Education for All
                                             <span class="item-description">Help 500 children get quality
                                                 education</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('causes.php#hunger') ?>">
+                                        <a class="dropdown-item" href="<?= url('zero-hunger.php') ?>">
                                             <i class="fas fa-utensils"></i> Zero Hunger
                                             <span class="item-description">Daily meals for 1000+ families</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('causes.php#water') ?>">
+                                        <a class="dropdown-item" href="<?= url('clean-water-project.php') ?>">
                                             <i class="fas fa-tint"></i> Clean Water Project
                                             <span class="item-description">Providing clean water to villages</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-3">
                                         <h6 class="dropdown-header">Long-term Goals</h6>
-                                        <a class="dropdown-item" href="<?= url('causes.php#women') ?>">
+                                        <a class="dropdown-item" href="<?= url('women-empowerment-causes.php') ?>">
                                             <i class="fas fa-female"></i> Women Empowerment
                                             <span class="item-description">Creating equal opportunities</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('causes.php#healthcare') ?>">
+                                        <a class="dropdown-item" href="<?= url('healthcare-access.php') ?>">
                                             <i class="fas fa-hospital"></i> Healthcare Access
                                             <span class="item-description">Medical facilities for all</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('causes.php#environment') ?>">
+                                        <a class="dropdown-item" href="<?= url('environmental-protection.php') ?>">
                                             <i class="fas fa-leaf"></i> Environmental Protection
                                             <span class="item-description">Sustainable future initiatives</span>
-                                        </a>
-                                        <a class="dropdown-item" href="<?= url('causes.php#elderly') ?>">
-                                            <i class="fas fa-user-friends"></i> Elder Care
-                                            <span class="item-description">Support for senior citizens</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-3">
@@ -404,58 +402,58 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <h6 class="dropdown-header">Annual Programs</h6>
-                                        <a class="dropdown-item" href="<?= url('event.php#yoga') ?>">
+                                        <a class="dropdown-item" href="<?= url('international-yoga-day.php') ?>">
                                             <i class="fas fa-om"></i> International Yoga Day
                                             <span class="item-description">June 21st - Join thousands</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#womens') ?>">
+                                        <a class="dropdown-item" href="<?= url('womens-day.php') ?>">
                                             <i class="fas fa-female"></i> Women's Day
                                             <span class="item-description">March 8th - Empowerment events</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#independence') ?>">
+                                        <a class="dropdown-item" href="<?= url('independence-day.php') ?>">
                                             <i class="fas fa-flag"></i> Independence Day
                                             <span class="item-description">August 15th - Patriotic celebrations</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#diwali') ?>">
+                                        <a class="dropdown-item" href="<?= url('diwali-celebration.php') ?>">
                                             <i class="fas fa-star"></i> Diwali Celebration
                                             <span class="item-description">Festival of lights</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-3">
                                         <h6 class="dropdown-header">Community Events</h6>
-                                        <a class="dropdown-item" href="<?= url('event.php#health') ?>">
+                                        <a class="dropdown-item" href="<?= url('health-camps-events.php') ?>">
                                             <i class="fas fa-heartbeat"></i> Health Camps
                                             <span class="item-description">Free medical checkup camps</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#blood') ?>">
+                                        <a class="dropdown-item" href="<?= url('blood-donation-drives.php') ?>">
                                             <i class="fas fa-tint"></i> Blood Donation Drives
                                             <span class="item-description">Save lives by donating blood</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#education') ?>">
+                                        <a class="dropdown-item" href="<?= url('education-workshops.php') ?>">
                                             <i class="fas fa-book"></i> Education Workshops
                                             <span class="item-description">Skills and career guidance</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#cultural') ?>">
+                                        <a class="dropdown-item" href="<?= url('cultural-programs.php') ?>">
                                             <i class="fas fa-theater-masks"></i> Cultural Programs
                                             <span class="item-description">Celebrating our heritage</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-3">
                                         <h6 class="dropdown-header">Get Involved</h6>
-                                        <a class="dropdown-item" href="<?= url('event.php#volunteer') ?>">
+                                        <a class="dropdown-item" href="<?= url('volunteer-events.php') ?>">
                                             <i class="fas fa-hands-helping"></i> Volunteer at Events
                                             <span class="item-description">Join us in making events successful</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#organize') ?>">
+                                        <a class="dropdown-item" href="<?= url('organize-event.php') ?>">
                                             <i class="fas fa-calendar-plus"></i> Organize an Event
                                             <span class="item-description">Host an event in your area</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('event.php#sponsor') ?>">
+                                        <a class="dropdown-item" href="<?= url('sponsor-events.php') ?>">
                                             <i class="fas fa-handshake"></i> Sponsor Events
                                             <span class="item-description">Support our initiatives financially</span>
                                         </a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="<?= url('event.php#gallery') ?>">
+                                        <a class="dropdown-item" href="<?= url('event-gallery.php') ?>">
                                             <i class="fas fa-images"></i> Event Gallery
                                             <span class="item-description">Browse photos from past events</span>
                                         </a>
@@ -478,44 +476,46 @@
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Latest Updates</h6>
                                         <a class="dropdown-item featured" href="<?= url('blog.php') ?>">
-                                            <i class="fas fa-newspaper"></i> Breaking News
+                                            <i class="fas fa-newspaper"></i> Our Blogs
                                             <span class="feature-badge hot">NEW</span>
+                                            <span class="item-description">Inspiring insights and stories.</span>
+
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('blog.php#announcements') ?>">
+                                        <a class="dropdown-item" href="<?= url('announcements.php') ?>">
                                             <i class="fas fa-bullhorn"></i> Announcements
                                             <span class="item-description">Important updates and notices</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('single.php') ?>">
+                                        <a class="dropdown-item" href="<?= url('press-releases.php') ?>">
                                             <i class="fas fa-file-alt"></i> Press Releases
                                             <span class="item-description">Official statements and news</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('blog.php#media') ?>">
+                                        <a class="dropdown-item" href="<?= url('media-coverage.php') ?>">
                                             <i class="fas fa-tv"></i> Media Coverage
                                             <span class="item-description">Featured in news outlets</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Stories & Impact</h6>
-                                        <a class="dropdown-item" href="<?= url('blog.php#success') ?>">
+                                        <a class="dropdown-item" href="<?= url('success-stories.php') ?>">
                                             <i class="fas fa-star"></i> Success Stories
                                             <span class="item-description">Lives we've changed</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('blog.php#testimonials') ?>">
+                                        <a class="dropdown-item" href="<?= url('testimonials.php') ?>">
                                             <i class="fas fa-quote-left"></i> Testimonials
                                             <span class="item-description">What people say</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('blog.php#impact') ?>">
+                                        <a class="dropdown-item" href="<?= url('impact-reports.php') ?>">
                                             <i class="fas fa-chart-line"></i> Impact Reports
                                             <span class="item-description">Quarterly updates</span>
                                         </a>
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Stay Connected</h6>
-                                        <a class="dropdown-item" href="<?= url('blog.php#newsletter') ?>">
+                                        <a class="dropdown-item" href="<?= url('newsletter-news.php') ?>">
                                             <i class="fas fa-envelope-open"></i> Newsletter
                                             <span class="item-description">Monthly updates in your inbox</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('blog.php#social') ?>">
+                                        <a class="dropdown-item" href="<?= url('social-media.php') ?>">
                                             <i class="fas fa-share-alt"></i> Social Media
                                             <span class="item-description">Follow us on social platforms</span>
                                         </a>
@@ -555,21 +555,21 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Join Our Community</h6>
-                                        <a class="dropdown-item" href="<?= url('volunteer.php') ?>">
+                                        <a class="dropdown-item" href="<?= url('become-volunteer.php') ?>">
                                             <i class="fas fa-user-plus"></i>
                                             <div>
                                                 <strong>Become a Volunteer</strong>
                                                 <small>Join our volunteer network</small>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('volunteer.php#membership') ?>">
+                                        <a class="dropdown-item" href="<?= url('membership-program.php') ?>">
                                             <i class="fas fa-id-card"></i>
                                             <div>
                                                 <strong>Membership Program</strong>
                                                 <small>Be part of our family</small>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('team.php#careers') ?>">
+                                        <a class="dropdown-item" href="<?= url('career-opportunities.php') ?>">
                                             <i class="fas fa-briefcase"></i>
                                             <div>
                                                 <strong>Career Opportunities</strong>
@@ -579,21 +579,21 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Support Our Cause</h6>
-                                        <a class="dropdown-item" href="<?= url('donate.php') ?>">
+                                        <a class="dropdown-item" href="<?= url('make-donation.php') ?>">
                                             <i class="fas fa-donate"></i>
                                             <div>
                                                 <strong>Make a Donation</strong>
                                                 <small>Every contribution matters</small>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('contact.php#partnership') ?>">
+                                        <a class="dropdown-item" href="<?= url('corporate-partnership.php') ?>">
                                             <i class="fas fa-handshake"></i>
                                             <div>
                                                 <strong>Corporate Partnership</strong>
                                                 <small>Collaborate for impact</small>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('contact.php#sponsor') ?>">
+                                        <a class="dropdown-item" href="<?= url('sponsor-programs.php') ?>">
                                             <i class="fas fa-star"></i>
                                             <div>
                                                 <strong>Sponsor Programs</strong>
