@@ -40,6 +40,8 @@
     <link href="<?= asset('css/page-enhancements.css') ?>" rel="stylesheet">
     <!-- Typography Overrides for Compact Styling -->
     <link href="<?= asset('css/typography-overrides.css') ?>" rel="stylesheet">
+    <!-- Coming Soon Pages Stylesheet -->
+    <link href="<?= asset('css/coming-soon.css') ?>" rel="stylesheet">
 
     <!-- Enhanced Navbar JavaScript -->
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
@@ -141,20 +143,20 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Organization</h6>
-                                        <a class="dropdown-item" href="<?= url('about.php') ?>">
+                                        <a class="dropdown-item" href="<?= url('our-story.php') ?>">
                                             <i class="fas fa-heart"></i> Our Story & History
                                             <span class="item-description">Learn about our journey and founding
                                                 principles</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('about.php#mission') ?>">
+                                        <a class="dropdown-item" href="<?= url('vision-mission.php') ?>">
                                             <i class="fas fa-eye"></i> Vision & Mission
                                             <span class="item-description">Our goals for a better tomorrow</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('team.php') ?>">
+                                        <a class="dropdown-item" href="<?= url('leadership.php') ?>">
                                             <i class="fas fa-users"></i> Leadership Team
                                             <span class="item-description">Meet the people behind our mission</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('about.php#achievements') ?>">
+                                        <a class="dropdown-item" href="<?= url('achievements.php') ?>">
                                             <i class="fas fa-award"></i> Our Achievements
                                             <span class="item-description">Milestones and recognition over the
                                                 years</span>
@@ -162,23 +164,22 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <h6 class="dropdown-header">Transparency</h6>
-                                        <a class="dropdown-item" href="<?= url('about.php#reports') ?>">
+                                        <a class="dropdown-item" href="<?= url('annual-reports.php') ?>">
                                             <i class="fas fa-file-alt"></i> Annual Reports
                                             <span class="item-description">Detailed yearly activity and impact
                                                 reports</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('about.php#financials') ?>">
-                                            <i class="fas fa-chart-pie"></i> Financial Reports
-                                            <span class="item-description">Complete financial transparency and
-                                                audits</span>
-                                        </a>
-                                        <a class="dropdown-item" href="<?= url('about.php#certifications') ?>">
+                                        <a class="dropdown-item" href="<?= url('certifications.php') ?>">
                                             <i class="fas fa-certificate"></i> Certifications
                                             <span class="item-description">Government approvals and compliance</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('about.php#partners') ?>">
+                                        <a class="dropdown-item" href="<?= url('our-partners.php') ?>">
                                             <i class="fas fa-handshake"></i> Our Partners
                                             <span class="item-description">Organizations supporting our cause</span>
+                                        </a>
+                                        <a class="dropdown-item" href="<?= url('our-investors.php') ?>">
+                                            <i class="fas fa-chart-line"></i> Our Investors
+                                            <span class="item-description">Major donors and supporters</span>
                                         </a>
                                     </div>
                                 </div>
@@ -205,15 +206,15 @@
                                             </div>
                                         </div>
                                         <h6 class="dropdown-header">Education</h6>
-                                        <a class="dropdown-item" href="<?= url('service.php#education') ?>">
+                                        <a class="dropdown-item" href="<?= url('school-support.php') ?>">
                                             <i class="fas fa-graduation-cap"></i> School Support
                                             <span class="item-description">Scholarships and school infrastructure</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#literacy') ?>">
+                                        <a class="dropdown-item" href="<?= url('adult-literacy.php') ?>">
                                             <i class="fas fa-book"></i> Adult Literacy
                                             <span class="item-description">Teaching reading and writing to adults</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#digital') ?>">
+                                        <a class="dropdown-item" href="<?= url('digital-learning.php') ?>">
                                             <i class="fas fa-laptop"></i> Digital Learning
                                             <span class="item-description">Computer education and online
                                                 resources</span>
@@ -228,15 +229,15 @@
                                             </div>
                                         </div>
                                         <h6 class="dropdown-header">Healthcare</h6>
-                                        <a class="dropdown-item" href="<?= url('service.php#medical') ?>">
+                                        <a class="dropdown-item" href="<?= url('medical-camps.php') ?>">
                                             <i class="fas fa-heartbeat"></i> Medical Camps
                                             <span class="item-description">Free health checkups and treatments</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#maternal') ?>">
+                                        <a class="dropdown-item" href="<?= url('maternal-care.php') ?>">
                                             <i class="fas fa-baby"></i> Maternal Care
                                             <span class="item-description">Supporting mothers and newborns</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#vaccination') ?>">
+                                        <a class="dropdown-item" href="<?= url('health-awareness.php') ?>">
                                             <i class="fas fa-user-md"></i> Health Awareness
                                             <span class="item-description">Preventive healthcare education</span>
                                         </a>
@@ -250,15 +251,15 @@
                                             </div>
                                         </div>
                                         <h6 class="dropdown-header">Women Empowerment</h6>
-                                        <a class="dropdown-item" href="<?= url('service.php#women') ?>">
+                                        <a class="dropdown-item" href="<?= url('womens-rights.php') ?>">
                                             <i class="fas fa-venus"></i> Women's Rights
                                             <span class="item-description">Legal aid and awareness programs</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#skills') ?>">
+                                        <a class="dropdown-item" href="<?= url('skill-development.php') ?>">
                                             <i class="fas fa-briefcase"></i> Skill Development
                                             <span class="item-description">Vocational training for employment</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#microfinance') ?>">
+                                        <a class="dropdown-item" href="<?= url('self-help-groups.php') ?>">
                                             <i class="fas fa-coins"></i> Self Help Groups
                                             <span class="item-description">Financial independence initiatives</span>
                                         </a>
@@ -272,16 +273,16 @@
                                             </div>
                                         </div>
                                         <h6 class="dropdown-header">Community Development</h6>
-                                        <a class="dropdown-item" href="<?= url('service.php#rural') ?>">
+                                        <a class="dropdown-item" href="<?= url('rural-development.php') ?>">
                                             <i class="fas fa-home"></i> Rural Development
                                             <span class="item-description">Infrastructure and facilities for
                                                 villages</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#environment') ?>">
+                                        <a class="dropdown-item" href="<?= url('environment-care.php') ?>">
                                             <i class="fas fa-tree"></i> Environment Care
                                             <span class="item-description">Tree plantation and conservation</span>
                                         </a>
-                                        <a class="dropdown-item" href="<?= url('service.php#disaster') ?>">
+                                        <a class="dropdown-item" href="<?= url('disaster-relief.php') ?>">
                                             <i class="fas fa-hands-helping"></i> Disaster Relief
                                             <span class="item-description">Emergency response and rehabilitation</span>
                                         </a>
