@@ -25,102 +25,129 @@ include '../app/views/layout/header.php';
 </div>
 <!-- Page Header End -->
 
-<style>
-.coming-soon-section {
-    padding: 60px 0;
-    background: #ffffff;
-}
-
-.coming-soon-card {
-    background: white;
-    border-radius: 15px;
-    padding: 40px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1px solid #f0f0f0;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.coming-soon-icon {
-    font-size: 60px;
-    color: #f26522;
-    margin-bottom: 20px;
-}
-
-.coming-soon-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.coming-soon-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.coming-soon-text {
-    font-size: 15px;
-    color: #777;
-    line-height: 1.5;
-    margin-bottom: 25px;
-}
-
-.coming-soon-btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #f26522;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(242, 101, 34, 0.3);
-}
-
-.coming-soon-btn:hover {
-    background: #d94d0f;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 15px rgba(242, 101, 34, 0.4);
-    color: white;
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .coming-soon-title {
-        font-size: 24px;
-    }
-    .coming-soon-subtitle {
-        font-size: 16px;
-    }
-    .coming-soon-card {
-        padding: 30px 25px;
-    }
-}
-</style>
 
 <!-- Vision Mission Section Start -->
-<div class="coming-soon-section">
+<div class="our-story-section">
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="coming-soon-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="coming-soon-icon">
-                        <i class="fas fa-eye"></i>
+        <!-- Header Section -->
+        <div class="welcome-header" data-aos="fade-down" data-aos-duration="1000">
+            <h1>Our <span class="highlight-brand">Vision & Mission</span></h1>
+            <p class="welcome-subtitle">Empowering Lives Through Divine Grace and Compassionate Service</p>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="story-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="story-intro">
+                <div class="story-intro-text">
+                    <div class="highlight-text">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Our Mission</span>
                     </div>
-                    <h1 class="coming-soon-title">Vision & Mission</h1>
-                    <h2 class="coming-soon-subtitle">Our Goals Coming Soon</h2>
-                    <p class="coming-soon-text">
-                        We're preparing to share our comprehensive vision for a better tomorrow and our mission 
-                        to serve humanity through the divine grace of Goddess Durga. Discover our goals, values, 
-                        and the guiding principles that drive every initiative we undertake.
+                    <p class="story-paragraph">
+                        Widowed women, handicapped people, disabled people, have to struggle for their rights and are frequently victims of discrimination. At Saptashati Foundation, our team works towards empowering the widowed women of our Indian society and, we ensure that we reach every corner of India to uplift these widowed from their distressed state.
                     </p>
-                    <a href="<?php echo url('about.php'); ?>" class="coming-soon-btn">
-                        <i class="fas fa-arrow-left"></i> Back to About Us
-                    </a>
+                    <p class="story-paragraph">
+                        Sustaining economic insecurity, social disgrace, and often abandonment, widowed women are facing several challenges in Indian society. At Saptashati Foundation, we are committed to transforming societal attitudes towards widowed women. We aim to shift perceptions and foster respect, while actively creating economically empowering opportunities that help them lead independent, dignified lives.
+                    </p>
+                </div>
+                <div class="story-intro-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&h=400&fit=crop" alt="Our Mission">
+                </div>
+            </div>
+
+            <!-- Mission Cards -->
+            <div class="story-cards">
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Supporting Widowed Women</h3>
+                    <p>Providing financial, social, and psychological support to help widowed women regain independence and dignity in their lives.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Skill Development</h3>
+                    <p>Offering knowledge and skill development programs to enable women to become self-reliant and economically independent.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Fighting Discrimination</h3>
+                    <p>Working against dowry harassment, infanticide, and human trafficking while promoting equality and justice.</p>
+                </div>
+            </div>
+
+            <div class="story-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                Widowed women and their children need our support and care. Saptashati Foundation was established with the aim to inspire a sense of welfare and bring a social revolution in the way we see these serious matters. Our purpose is to offer financial and social as well as economic security to women who have endured the grief of widowhood.
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="mission-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mission-content">
+                <div class="mission-image" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=400&fit=crop" alt="Our Vision">
+                </div>
+                <div class="mission-text">
+                    <h2 class="mission-title">
+                        <i class="fas fa-eye"></i>
+                        Our Vision
+                    </h2>
+                    <p class="story-paragraph">
+                        Our vision focuses on the welfare of handicapped people, widows, and senior citizens. In a bid to empower them with equal opportunities, we help them live independently with pride, dignity and self respect. We work towards the economic reform of these people, and help them provide the right skillset and exposure, so they may move forward in life.
+                    </p>
+                    <p class="story-paragraph">
+                        Women comprise of half the population of the globe and share one percent of the resources. In India, women have been enduring hardships on account of their widowed or even divorced status. We create a new experience to set the motion for women's empowerment through various programs and events that we organize annually.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impact Areas -->
+        <div class="story-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="highlight-text">
+                <i class="fas fa-target"></i>
+                <span>Our Focus Areas</span>
+            </div>
+            
+            <div class="story-cards">
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <i class="fas fa-heart"></i>
+                    <h3>Rural Women Empowerment</h3>
+                    <p>Bridging the gap between urban and rural women's status by providing equal opportunities and changing societal outlook.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Engagement</h3>
+                    <p>Enabling women to actively participate in community development and have a voice in shaping their economic and civic space.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Awareness & Education</h3>
+                    <p>Educating the public on human rights, justice, harmony, and creating increased opportunities for empowerment.</p>
+                </div>
+            </div>
+
+            <div class="story-paragraph" data-aos="fade-up" data-aos-duration="1000">
+                Every change on the planet starts with a new phase of consciousness, a new experience, and a new vision. We, at Durga Saptashati, create a new experience to set the motion for women's empowerment through various programs and events that we organize annually. These events aim at recognizing, uplifting and empowering the women who display some strength to come out of their deep rooted shell.
+            </div>
+        </div>
+
+        <!-- Final Vision Statement -->
+        <div class="mission-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2 class="mission-title">
+                        <i class="fas fa-dove"></i>
+                        Our Ultimate Goal
+                    </h2>
+                    <p class="story-paragraph">
+                        Our vision is to start and promote such methods and actions where socially and economically stable women irrespective of age, class, color, or family are able to engage actively in the means of their community so that they are able to start a life of dignity and respect.
+                    </p>
+                    <p class="story-paragraph">
+                        Women of India have nothing to state in shaping the economic and civic space in which they live. It is important that their ideas and thoughts, natural skills, strong and effective participation in the community, and their deep purpose for a more peaceful world be supposed to help catalyze the will for the transformation of systems and structures into the way of equality, community, and peace.
+                    </p>
+                </div>
+                <div class="mission-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=500&h=400&fit=crop" alt="Empowerment Goals">
                 </div>
             </div>
         </div>

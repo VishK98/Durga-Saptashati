@@ -25,104 +25,138 @@ include '../app/views/layout/header.php';
 </div>
 <!-- Page Header End -->
 
-<style>
-.coming-soon-section {
-    padding: 60px 0;
-    background: #ffffff;
-}
-
-.coming-soon-card {
-    background: white;
-    border-radius: 15px;
-    padding: 40px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1px solid #f0f0f0;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.coming-soon-icon {
-    font-size: 60px;
-    color: #f26522;
-    margin-bottom: 20px;
-}
-
-.coming-soon-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.coming-soon-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.coming-soon-text {
-    font-size: 15px;
-    color: #777;
-    line-height: 1.5;
-    margin-bottom: 25px;
-}
-
-.coming-soon-btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #f26522;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(242, 101, 34, 0.3);
-}
-
-.coming-soon-btn:hover {
-    background: #d94d0f;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 15px rgba(242, 101, 34, 0.4);
-    color: white;
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .coming-soon-title {
-        font-size: 24px;
-    }
-    .coming-soon-subtitle {
-        font-size: 16px;
-    }
-    .coming-soon-card {
-        padding: 30px 25px;
-    }
-}
-</style>
 
 <!-- Leadership Section Start -->
-<div class="coming-soon-section">
+<div class="our-story-section">
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="coming-soon-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="coming-soon-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h1 class="coming-soon-title">Leadership Team</h1>
-                    <h2 class="coming-soon-subtitle">Meet Our Leaders Coming Soon</h2>
-                    <p class="coming-soon-text">
-                        We're preparing detailed profiles of our dedicated leadership team - the visionaries, 
-                        directors, and key personnel who guide our foundation's mission. Learn about their 
-                        backgrounds, expertise, and commitment to serving humanity through divine grace.
-                    </p>
-                    <a href="<?php echo url('about.php'); ?>" class="coming-soon-btn">
-                        <i class="fas fa-arrow-left"></i> Back to About Us
-                    </a>
+        <!-- Header Section -->
+        <div class="welcome-header" data-aos="fade-down" data-aos-duration="1000">
+            <h1>Our <span class="highlight-brand">Leadership Team</span></h1>
+            <p class="welcome-subtitle">Meet the Visionaries Behind Our Mission</p>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="story-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="highlight-text">
+                <i class="fas fa-crown"></i>
+                <span>Guided by Excellence</span>
+            </div>
+            <p class="story-paragraph">
+                Our leadership team comprises dedicated individuals who bring decades of experience in social work, 
+                community development, and organizational management. Together, they guide Durga Saptashati Foundation 
+                towards achieving our mission of empowering vulnerable communities across India.
+            </p>
+        </div>
+
+        <!-- Leadership Cards -->
+        <div class="story-content">
+            <div class="story-cards">
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Board of Directors</h3>
+                    <p>Experienced professionals providing strategic guidance and governance to ensure our foundation operates with transparency and effectiveness.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Executive Team</h3>
+                    <p>Dynamic leaders overseeing daily operations, program implementation, and community outreach initiatives across various regions.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <i class="fas fa-heart"></i>
+                    <h3>Advisory Council</h3>
+                    <p>Respected community members and subject matter experts who provide valuable insights and support for our charitable programs.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Leadership Philosophy -->
+        <div class="mission-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mission-content">
+                <div class="mission-image" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop" alt="Leadership Excellence">
+                </div>
+                <div class="mission-text">
+                    <h2 class="mission-title">
+                        <i class="fas fa-lightbulb"></i>
+                        Leadership Philosophy
+                    </h2>
+                    <p class="story-paragraph">
+                        Our leadership approach is rooted in servant leadership principles, where every decision is made with 
+                        the welfare of our beneficiaries at heart. We believe in collaborative leadership that empowers our 
+                        team members and volunteers to contribute their best towards our shared mission.
+                    </p>
+                    <p class="story-paragraph">
+                        With a commitment to transparency, accountability, and continuous learning, our leaders ensure that 
+                        Durga Saptashati Foundation remains true to its core values while adapting to the evolving needs 
+                        of the communities we serve.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership Qualities -->
+        <div class="story-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="highlight-text">
+                <i class="fas fa-star"></i>
+                <span>Leadership Excellence</span>
+            </div>
+            
+            <div class="story-cards">
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity & Ethics</h3>
+                    <p>Unwavering commitment to ethical practices and transparent governance in all our operations and decision-making processes.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fas fa-compass"></i>
+                    <h3>Visionary Thinking</h3>
+                    <p>Strategic vision that anticipates future challenges and opportunities while staying true to our foundational mission and values.</p>
+                </div>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Collaborative Approach</h3>
+                    <p>Fostering teamwork and partnerships that amplify our impact and create sustainable solutions for community development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mission-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2 class="mission-title">
+                        <i class="fas fa-handshake"></i>
+                        Join Our Leadership Journey
+                    </h2>
+                    <p class="story-paragraph">
+                        We believe that true leadership emerges from every level of our organization. Whether you're a 
+                        volunteer, donor, or community partner, your contribution helps shape our collective leadership 
+                        and drives positive change in society.
+                    </p>
+                    <p class="story-paragraph">
+                        If you share our passion for social justice and community empowerment, we invite you to join us 
+                        in various capacities. Together, we can build a more equitable and compassionate world for all.
+                    </p>
+                </div>
+                <div class="mission-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500&h=400&fit=crop" alt="Team Collaboration">
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership Impact -->
+        <div class="story-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="highlight-text">
+                <i class="fas fa-trophy"></i>
+                <span>Our Impact Through Leadership</span>
+            </div>
+            <p class="story-paragraph">
+                Under the guidance of our dedicated leadership team, Durga Saptashati Foundation has successfully 
+                expanded its reach to numerous communities, implemented innovative programs, and built lasting 
+                partnerships that continue to transform lives. Our leaders' commitment to excellence ensures that 
+                every initiative we undertake creates meaningful and sustainable change.
+            </p>
         </div>
     </div>
 </div>

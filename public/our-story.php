@@ -25,7 +25,6 @@ include '../app/views/layout/header.php';
 </div>
 <!-- Page Header End -->
 
-
 <div class="our-story-section">
     <div class="container-fluid">
         <div class="welcome-header" data-aos="fade-down" data-aos-duration="1000">
