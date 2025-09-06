@@ -78,7 +78,7 @@ include '../app/views/layout/header.php';
         <div class="container-fluid">
             <!-- Main Achievement Showcase -->
             <div class="main-achievement" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <div class="row align-items-center">
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="achievement-image">
                             <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop"
@@ -90,10 +90,12 @@ include '../app/views/layout/header.php';
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="achievement-content">
+                        <div class="achievement-content  p-3">
                             <h3>Excellence in Community Service Award</h3>
-                            <p>Recognized by the State Government for our outstanding contribution to women empowerment
-                                and community development across 50+ villages in rural India.</p>
+                            <p>Recognized by the State Government for our outstanding contribution to women empowerment,
+                                child education, skill development, and community welfare across 50+ villages in rural
+                                India — creating opportunities, uplifting lives, fostering sustainable growth, and
+                                inspiring a new generation to build a brighter future.</p>
                             <div class="achievement-details">
                                 <div class="detail-item">
                                     <i class="fas fa-users"></i>
@@ -165,6 +167,39 @@ include '../app/views/layout/header.php';
 
     <!-- Impact Timeline -->
     <div class="impact-timeline">
+        <!-- Floating animated icons - Achievement themed -->
+        <i class="fas fa-trophy floating-icon"></i>
+        <i class="fas fa-medal floating-icon"></i>
+        <i class="fas fa-award floating-icon"></i>
+        <i class="fas fa-certificate floating-icon"></i>
+        <i class="fas fa-star floating-icon"></i>
+        <i class="fas fa-ribbon floating-icon"></i>
+        <i class="fas fa-crown floating-icon"></i>
+        <i class="fas fa-gem floating-icon"></i>
+        <i class="fas fa-shield-alt floating-icon"></i>
+        <i class="fas fa-scroll floating-icon"></i>
+        <i class="fas fa-stamp floating-icon"></i>
+        <i class="fas fa-file-certificate floating-icon"></i>
+        <i class="fas fa-flag-checkered floating-icon"></i>
+        <i class="fas fa-graduation-cap floating-icon"></i>
+        <i class="fas fa-handshake floating-icon"></i>
+        <i class="fas fa-hands-helping floating-icon"></i>
+        <i class="fas fa-users floating-icon"></i>
+        <i class="fas fa-chart-line floating-icon"></i>
+
+        <!-- Pulse icons -->
+        <i class="fas fa-bullseye pulse-icon"></i>
+        <i class="fas fa-check-circle pulse-icon"></i>
+        <i class="fas fa-thumbs-up pulse-icon"></i>
+        <i class="fas fa-heart pulse-icon"></i>
+        <i class="fas fa-fire pulse-icon"></i>
+        <i class="fas fa-bolt pulse-icon"></i>
+
+        <!-- Rotating icons -->
+        <i class="fas fa-sun rotate-icon"></i>
+        <i class="fas fa-compass rotate-icon"></i>
+        <i class="fas fa-cog rotate-icon"></i>
+
         <div class="container-fluid">
             <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Timeline of Impact</h2>
@@ -230,7 +265,6 @@ include '../app/views/layout/header.php';
             <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Wall of Recognition</h2>
                 <p>Certificates, awards, and acknowledgments we've received</p>
-                <div class="header-line"></div>
             </div>
 
             <div class="certificates-grid">
@@ -240,7 +274,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1551836022-8b2858c9c69b?w=600&h=400&fit=crop"
                             alt="Government Recognition Certificate">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-award"></i>
+                                <h4>Official Recognition</h4>
+                                <p>Certified excellence in social impact</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Government Recognition Certificate</h5>
@@ -252,7 +290,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop"
                             alt="Excellence in Social Service">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-medal"></i>
+                                <h4>Service Excellence</h4>
+                                <p>Outstanding community welfare achievements</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Excellence in Social Service</h5>
@@ -264,7 +306,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop"
                             alt="Community Development Award">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-trophy"></i>
+                                <h4>Community Impact</h4>
+                                <p>Transforming lives across rural India</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Community Development Award</h5>
@@ -276,7 +322,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&h=400&fit=crop"
                             alt="Women Empowerment Recognition">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-crown"></i>
+                                <h4>Women's Empowerment</h4>
+                                <p>Empowering 2000+ women nationwide</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Women Empowerment Recognition</h5>
@@ -288,7 +338,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop"
                             alt="Outstanding Leadership Award">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-star"></i>
+                                <h4>Leadership Excellence</h4>
+                                <p>Pioneering social change initiatives</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Outstanding Leadership Award</h5>
@@ -300,7 +354,11 @@ include '../app/views/layout/header.php';
                         <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
                             alt="Best NGO Partnership Initiative">
                         <div class="certificate-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <div class="certificate-overlay-content">
+                                <i class="fas fa-handshake"></i>
+                                <h4>Partnership Success</h4>
+                                <p>Building bridges for greater impact</p>
+                            </div>
                         </div>
                     </div>
                     <h5>Best NGO Partnership Initiative</h5>
@@ -337,9 +395,6 @@ include '../app/views/layout/header.php';
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="modal-close" onclick="closeCertificateModal()">&times;</span>
         <img id="modalImage" src="" alt="">
-        <div class="modal-caption">
-            <h4 id="modalTitle"></h4>
-        </div>
         <div class="modal-navigation">
             <button class="nav-btn prev-btn" onclick="navigateCertificate(-1)">
                 <i class="fas fa-chevron-left"></i>
@@ -360,18 +415,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const certificateItems = document.querySelectorAll('.certificate-item');
     certificates = Array.from(certificateItems).map(item => {
         const img = item.querySelector('img');
-        const title = item.querySelector('h5');
         return {
             src: img.src,
             alt: img.alt,
-            title: title.textContent
         };
     });
 });
 
 function openCertificateModal(certificateElement) {
     const img = certificateElement.querySelector('img');
-    const title = certificateElement.querySelector('h5');
 
     // Find current certificate index
     const certificateItems = document.querySelectorAll('.certificate-item');
@@ -379,7 +431,6 @@ function openCertificateModal(certificateElement) {
 
     document.getElementById('modalImage').src = img.src;
     document.getElementById('modalImage').alt = img.alt;
-    document.getElementById('modalTitle').textContent = title.textContent;
 
     document.getElementById('certificateModal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -402,7 +453,6 @@ function navigateCertificate(direction) {
     const certificate = certificates[currentCertificateIndex];
     document.getElementById('modalImage').src = certificate.src;
     document.getElementById('modalImage').alt = certificate.alt;
-    document.getElementById('modalTitle').textContent = certificate.title;
 }
 
 // Close modal with Escape key
