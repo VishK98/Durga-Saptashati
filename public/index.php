@@ -9,7 +9,7 @@ include '../app/views/layout/header.php';
 ?>
 
 <!-- Carousel Start -->
-<div class="carousel">
+<div class="carousel" data-aos="fade" data-aos-duration="1500">
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <div class="carousel-item">
@@ -17,12 +17,12 @@ include '../app/views/layout/header.php';
                     <img src="<?php echo asset('img/carousel/carousel.webp'); ?>" alt="Helping Children">
                 </div>
                 <div class="carousel-text">
-                    <h1>Let's be kind for children</h1>
-                    <p>
+                    <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Let's be kind for children</h1>
+                    <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                         Join us in making a difference in the lives of underprivileged children through education,
                         healthcare, and spiritual guidance.
                     </p>
-                    <div class="carousel-btn">
+                    <div class="carousel-btn" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                         <a class="btn btn-custom" href="<?php echo url('donate.php'); ?>">Donate Now</a>
                         <a class="btn btn-custom btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
@@ -35,12 +35,13 @@ include '../app/views/layout/header.php';
                     <img src="<?php echo asset('img/carousel/carousel-1.webp'); ?>" alt="Helping Hand">
                 </div>
                 <div class="carousel-text">
-                    <h1>Get Involved with helping hand</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Get Involved with helping hand
+                    </h1>
                     <p>
                         Together we can create positive change in society through compassion, service, and dedication to
                         the divine mother.
                     </p>
-                    <div class="carousel-btn">
+                    <div class="carousel-btn" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                         <a class="btn btn-custom" href="<?php echo url('donate.php'); ?>">Donate Now</a>
                         <a class="btn btn-custom btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
@@ -53,12 +54,13 @@ include '../app/views/layout/header.php';
                     <img src="<?php echo asset('img/carousel/carousel-2.webp'); ?>" alt="Bringing Smiles">
                 </div>
                 <div class="carousel-text">
-                    <h1>Bringing smiles to millions</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Bringing smiles to millions
+                    </h1>
                     <p>
                         Through the grace of Durga Ma, we work tirelessly to bring hope, healing, and happiness to those
                         in need.
                     </p>
-                    <div class="carousel-btn">
+                    <div class="carousel-btn" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                         <a class="btn btn-custom" href="<?php echo url('donate.php'); ?>">Donate Now</a>
                         <a class="btn btn-custom btn-play" data-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch
@@ -97,10 +99,11 @@ include '../app/views/layout/header.php';
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="about-img" data-parallax="scroll" data-image-src="<?php echo asset('img/about.jpg'); ?>">
+                <div class="about-img" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true"
+                    data-parallax="scroll" data-image-src="<?php echo asset('img/about.jpg'); ?>">
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-once="true">
                 <div class="section-header">
                     <p>Learn About Us</p>
                     <h2>Spiritual foundation serving humanity</h2>
@@ -108,51 +111,65 @@ include '../app/views/layout/header.php';
                 <div class="about-tab">
                     <ul class="nav nav-pills nav-justified">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                            <a class="nav-link active" data-toggle="pill" href="javascript:void(0);"
+                                data-target="#tab-content-1" onclick="return false;">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                            <a class="nav-link" data-toggle="pill" href="javascript:void(0);"
+                                data-target="#tab-content-2" onclick="return false;">Mission</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
+                            <a class="nav-link" data-toggle="pill" href="javascript:void(0);"
+                                data-target="#tab-content-3" onclick="return false;">Vision</a>
                         </li>
                     </ul>
 
-                    <div class="tab-content">
+                    <div class="tab-content text-justify">
                         <div id="tab-content-1" class="tab-pane active donate-text">
-                            <p>
-                                Durga Saptashati Foundation is dedicated to serving humanity through the divine grace of
-                                Goddess Durga. We believe in the power of compassion, service, and spiritual growth to
-                                transform lives and communities. Our organization works tirelessly to provide
-                                educational
-                                opportunities, healthcare services, and spiritual guidance to those in need.
-                            </p>
+                            <p>Durga Saptashati Foundation is a women’s rights nonprofit
+                                organization which is a platform to empower widows, handicapped people, disabled people,
+                                senior citizens and
+                                women of the nation. With the goals of providing strength, confidence, better living,
+                                and respect, Saptashati Foundation brings in enlightenment and a ray of hope in the
+                                world of people who have gone through a lot of test things in their lives. We are the
+                                voice of these people, and we are dedicated to bringing that positive change that can
+                                bring happiness in their lives. We closely work with rural and urban women and
+                                organizations on various problems to make their lives better. Saptashati Foundation also
+                                links to various civil-society organizations on the welfare of society by addressing and
+                                resolving many issues for women and senior citizens. From providing better education for
+                                the needy people to raising voice against dowry harassment, child marriage, female
+                                genital mutilation, our team of Saptashati Foundation becomes the voice of the strong
+                                women of India and let them live with independence and a sense of respect in whatever
+                                they are doing.</p>
                         </div>
                         <div id="tab-content-2" class="tab-pane fade donate-text">
-                            <p>
-                                At Durga Saptashati Foundation, our mission is rooted in the sacred teachings of the
-                                Saptashati,
-                                inspiring us to extend love, care, and service to all. We are committed to empowering
-                                the
-                                underprivileged through access to education, essential healthcare, and spiritual
-                                upliftment.
-                                Guided by the divine energy of Goddess Durga, we organize charitable initiatives that
-                                support
-                                families in need and encourage personal transformation through devotion and service.
-                            </p>
+                            <p>Widowed women, handicapped people, disabled people, have to struggle for their rights and
+                                are frequently victims of discrimination. At Saptashati Foundation, our team works
+                                towards empowering the widowed women of our Indian society and, we ensure that we reach
+                                every corner of India to uplift these widowed from their distressed state. Sustaining
+                                economic insecurity, social disgrace, and often abandonment, widowed women are facing
+                                several challenges in Indian society. At Saptashati Foundation, we are committed to
+                                transforming societal attitudes towards widowed women. We aim to shift Widowed women and
+                                their children need our support and care. Saptashati Foundation was established with the
+                                aim to inspire a sense of welfare and bring a social revolution in the way we see these
+                                serious matters. Our purpose is to offer financial and social as well as economic
+                                security to women who have endured the grief of widowhood. We help, assist, and support
+                                old and young widowed women in rural and urban areas to regain an opportunity at a more
+                                secure life. </p>
                         </div>
                         <div id="tab-content-3" class="tab-pane fade donate-text">
-                            <p>
-                                We envision a compassionate world illuminated by the grace of the Divine Mother, where
-                                every soul
-                                is nurtured with knowledge, wellness, and spiritual awakening. Durga Saptashati
-                                Foundation is
-                                devoted to creating lasting impact by fostering equality, uplifting marginalized
-                                communities,
-                                and promoting values of unity and service. Through the blessings of Durga Ma, we strive
-                                to build
-                                a harmonious society where every individual can flourish with dignity and purpose.
-                            </p>
+                            <p>Our vision focuses on the welfare of handicapped people, widows, and senior citizens. In
+                                a bid to empower them with equal opportunities, we help them live independently with
+                                pride, dignity and self respect. We work towards the economic reform of these people,
+                                and help them provide the right skillset and exposure, so they may move forward in life.
+                                We fight against dowry harassment, infanticide, and human trafficking. Women comprise of
+                                half the population of the globe and share one percent of the resources. In India, women
+                                have been enduring hardships on account of their widowed or even divorced status. They
+                                are homebound often on account of this marital status, restricting them to grow
+                                personally or professionally. The growing globalization that benefits only the urban
+                                areas shows no remarkable impact on underprivileged rural areas- where women are still
+                                suffering due to societal pressures. Every change on the planet starts with a new phase
+                                of consciousness, a new experience, and a new vision.</p>
                         </div>
                     </div>
 
@@ -165,14 +182,14 @@ include '../app/views/layout/header.php';
 
 
 <!-- Service Start -->
-<div class="service">
+<div class="service" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>What We Do?</p>
             <h2>We believe that we can save more lives with you</h2>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-diet"></i>
@@ -184,7 +201,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-water"></i>
@@ -196,7 +213,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-healthcare"></i>
@@ -208,7 +225,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-education"></i>
@@ -220,7 +237,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-home"></i>
@@ -231,7 +248,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-social-care"></i>
@@ -249,10 +266,11 @@ include '../app/views/layout/header.php';
 
 
 <!-- Facts Start -->
-<div class="facts" data-parallax="scroll" data-image-src="<?php echo asset('img/facts.jpg'); ?>">
+<div class="facts" data-parallax="scroll" data-image-src="<?php echo asset('img/facts.jpg'); ?>" data-aos="fade"
+    data-aos-duration="1000">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="facts-item">
                     <i class="flaticon-home"></i>
                     <div class="facts-text">
@@ -261,7 +279,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="facts-item">
                     <i class="flaticon-charity"></i>
                     <div class="facts-text">
@@ -270,7 +288,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="facts-item">
                     <i class="flaticon-kindness"></i>
                     <div class="facts-text">
@@ -279,7 +297,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="facts-item">
                     <i class="flaticon-donation"></i>
                     <div class="facts-text">
@@ -295,13 +313,13 @@ include '../app/views/layout/header.php';
 
 
 <!-- Causes Start -->
-<div class="causes">
+<div class="causes" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Popular Causes</p>
             <h2>Let's know about charity causes around the world</h2>
         </div>
-        <div class="owl-carousel causes-carousel">
+        <div class="owl-carousel causes-carousel" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <div class="causes-item">
                 <div class="causes-img">
                     <img src="<?php echo asset('img/causes-1.jpg'); ?>" alt="Image">
@@ -413,10 +431,11 @@ include '../app/views/layout/header.php';
 
 
 <!-- Donate Start -->
-<div class="donate" data-parallax="scroll" data-image-src="<?php echo asset('img/donate.jpg'); ?>">
+<div class="donate" data-parallax="scroll" data-image-src="<?php echo asset('img/donate.jpg'); ?>" data-aos="fade"
+    data-aos-duration="1000">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
                 <div class="donate-content">
                     <div class="section-header">
                         <p>Donate Now</p>
@@ -431,7 +450,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
                 <div class="donate-form">
                     <form action="<?php echo url('donate.php'); ?>" method="POST">
                         <div class="control-group">
@@ -465,14 +484,14 @@ include '../app/views/layout/header.php';
 
 
 <!-- Event Start -->
-<div class="event">
+<div class="event" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Upcoming Events</p>
             <h2>Be ready for our upcoming charity events</h2>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="event-item">
                     <img src="<?php echo asset('img/event-1.jpg'); ?>" alt="Image">
                     <div class="event-content">
@@ -492,7 +511,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="event-item">
                     <img src="<?php echo asset('img/event-2.jpg'); ?>" alt="Image">
                     <div class="event-content">
@@ -519,14 +538,14 @@ include '../app/views/layout/header.php';
 
 
 <!-- Team Start -->
-<div class="team">
+<div class="team" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Meet Our Team</p>
             <h2>Awesome people behind our charity activities</h2>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="team-item">
                     <div class="team-img">
                         <img src="<?php echo asset('img/team-1.jpg'); ?>" alt="Team Image">
@@ -543,7 +562,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="team-item">
                     <div class="team-img">
                         <img src="<?php echo asset('img/team-2.jpg'); ?>" alt="Team Image">
@@ -560,7 +579,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="team-item">
                     <div class="team-img">
                         <img src="<?php echo asset('img/team-3.jpg'); ?>" alt="Team Image">
@@ -577,7 +596,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                 <div class="team-item">
                     <div class="team-img">
                         <img src="<?php echo asset('img/team-4.jpg'); ?>" alt="Team Image">
@@ -601,10 +620,11 @@ include '../app/views/layout/header.php';
 
 
 <!-- Volunteer Start -->
-<div class="volunteer" data-parallax="scroll" data-image-src="<?php echo asset('img/volunteer.jpg'); ?>">
+<div class="volunteer" data-parallax="scroll" data-image-src="<?php echo asset('img/volunteer.jpg'); ?>" data-aos="fade"
+    data-aos-duration="1000">
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
                 <div class="volunteer-form">
                     <form action="<?php echo url('volunteer.php'); ?>" method="POST">
                         <div class="control-group">
@@ -624,7 +644,7 @@ include '../app/views/layout/header.php';
                     </form>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
                 <div class="volunteer-content">
                     <div class="section-header">
                         <p>Become A Volunteer</p>
@@ -646,13 +666,14 @@ include '../app/views/layout/header.php';
 
 
 <!-- Testimonial Start -->
-<div class="testimonial">
+<div class="testimonial" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Testimonial</p>
             <h2>What people are talking about our charity activities</h2>
         </div>
-        <div class="owl-carousel testimonials-carousel">
+        <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200"
+            data-aos-duration="1000">
             <div class="testimonial-item">
                 <div class="testimonial-profile">
                     <img src="<?php echo asset('img/testimonial-1.jpg'); ?>" alt="Image">
@@ -720,16 +741,16 @@ include '../app/views/layout/header.php';
 
 
 <!-- Contact Start -->
-<div class="contact">
+<div class="contact" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Get In Touch</p>
             <h2>Contact for any query</h2>
         </div>
-        <div class="contact-img">
+        <div class="contact-img" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
             <img src="<?php echo asset('img/contact.jpg'); ?>" alt="Image">
         </div>
-        <div class="contact-form">
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <div id="success"></div>
             <form name="sentMessage" id="contactForm" action="<?php echo url('contact.php'); ?>" method="POST"
                 novalidate="novalidate">
@@ -764,14 +785,14 @@ include '../app/views/layout/header.php';
 
 
 <!-- Blog Start -->
-<div class="blog">
+<div class="blog" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid">
-        <div class="section-header text-center">
+        <div class="section-header text-center" data-aos="fade-up" data-aos-duration="800">
             <p>Our Blog</p>
             <h2>Latest news & articles directly from our blog</h2>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="<?php echo asset('img/blog-1.jpg'); ?>" alt="Image">
@@ -789,7 +810,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="<?php echo asset('img/blog-2.jpg'); ?>" alt="Image">
@@ -807,7 +828,7 @@ include '../app/views/layout/header.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="<?php echo asset('img/blog-3.jpg'); ?>" alt="Image">

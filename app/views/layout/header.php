@@ -28,14 +28,14 @@
     <link href="<?= asset('lib/flaticon/font/flaticon.css') ?>" rel="stylesheet">
     <link href="<?= asset('lib/animate/animate.min.css') ?>" rel="stylesheet">
     <link href="<?= asset('lib/owlcarousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="<?= asset('css/style.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/navbar-responsive.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/mobile-navbar.css') ?>" rel="stylesheet">
     <link href="<?= asset('css/hero-slider.css') ?>" rel="stylesheet">
-    <!-- Global Typography & Animation System -->
-    <link href="<?= asset('css/global-typography-animations.css') ?>" rel="stylesheet">
     <!-- Page-Level Enhancements -->
     <link href="<?= asset('css/page-enhancements.css') ?>" rel="stylesheet">
     <!-- Typography Overrides for Compact Styling -->
@@ -45,8 +45,6 @@
     <script src="<?= asset('js/navbar-enhanced.js') ?>" defer></script>
     <!-- Hero Slider JavaScript -->
     <script src="<?= asset('js/hero-slider.js') ?>" defer></script>
-    <!-- Global Animation Controller -->
-    <script src="<?= asset('js/global-animations.js') ?>" defer></script>
 </head>
 
 <body>

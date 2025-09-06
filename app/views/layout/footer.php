@@ -83,7 +83,94 @@
 <!-- Template Javascript -->
 <script src="<?php echo asset('js/main.js'); ?>"></script>
 <script src="<?php echo asset('js/navbar-enhanced.js'); ?>"></script>
+
+<!-- AOS (Animate On Scroll) JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-in-out',
+        delay: 0,
+        anchorPlacement: 'top-bottom'
+    });
+    
+    // Refresh AOS on dynamic content changes
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            AOS.refresh();
+        }, 500);
+    });
+    
+    // Fix tab scrolling issue - prevent page from jumping to top
+    $(document).ready(function() {
+        // Store current scroll position
+        var scrollPos = 0;
+        
+        // Override default tab behavior
+        $('.about-tab .nav-link').off('click').on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Store current scroll position
+            scrollPos = $(window).scrollTop();
+            
+            var $this = $(this);
+            var target = $this.attr('data-target') || $this.attr('href');
+            
+            // Remove active class from all tabs and panes
+            $('.about-tab .nav-link').removeClass('active');
+            $('.about-tab .tab-pane').removeClass('show active');
+            
+            // Add active class to clicked tab and corresponding pane
+            $this.addClass('active');
+            $(target).addClass('show active');
+            
+            // Restore scroll position
+            $(window).scrollTop(scrollPos);
+            
+            // Prevent any default action
+            return false;
+        });
+        
+        // Prevent Bootstrap's default tab behavior from scrolling
+        $('[data-toggle="pill"]').on('show.bs.tab', function (e) {
+            scrollPos = $(window).scrollTop();
+        });
+        
+        $('[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            $(window).scrollTop(scrollPos);
+        });
+    });
+    
+    // Fix parallax with AOS animation
+    $(document).ready(function() {
+        // Refresh parallax after AOS animations complete
+        setTimeout(function() {
+            if (typeof $.fn.parallax !== 'undefined') {
+                $('.about-img').parallax('refresh');
+            }
+        }, 1500);
+        
+        // Ensure about image animates properly
+        var aboutImg = $('.about .about-img');
+        if (aboutImg.length) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        $(entry.target).addClass('aos-animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            aboutImg.each(function() {
+                observer.observe(this);
+            });
+        }
+    });
+    
     // Initialize Bootstrap tooltips globally
     if (window.jQuery && typeof $().tooltip === 'function') {
         jQuery(function () {

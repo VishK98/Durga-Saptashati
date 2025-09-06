@@ -415,13 +415,13 @@
     display: inline !important;
     color: inherit !important;
   }
-  
+
   .navbar.navbar-modern .dropdown-menu .dropdown-item div strong {
     display: inline !important;
     color: rgba(255, 255, 255, 0.95) !important;
     font-weight: 500;
   }
-  
+
   .navbar.navbar-modern .dropdown-menu .dropdown-item div small {
     display: none !important; /* Hide descriptions on mobile */
   }
