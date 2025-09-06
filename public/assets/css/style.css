@@ -858,7 +858,6 @@ a:focus {
 .facts .facts-item {
   display: flex;
   flex-direction: row;
-  margin: 25px 0;
 }
 
 .facts .facts-item i {

@@ -65,12 +65,13 @@ include '../app/views/layout/header.php';
             </div>
 
             <div class="story-cards">
-                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-                    <i class="fas fa-hands-holding-heart"></i>
+                <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <i class="fas fa-hand-holding-heart"></i>
                     <h3>Supporting the Vulnerable</h3>
                     <p>Providing strength and support to widows, disabled individuals, and senior citizens across the
                         nation.</p>
                 </div>
+
                 <div class="story-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <i class="fas fa-users"></i>
                     <h3>Community Partnership</h3>
@@ -165,7 +166,7 @@ include '../app/views/layout/header.php';
                         <div class="facts-item">
                             <i class="flaticon-donation"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">250000</h3>
+                                <h3 class="facts-dollar" data-toggle="counter-up">250000</h3>
                                 <p>Funds Raised</p>
                             </div>
                         </div>

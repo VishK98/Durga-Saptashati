@@ -96,6 +96,19 @@
         delay: 0,
         anchorPlacement: 'top-bottom'
     });
+
+    // Initialize parallax for facts section
+    $(document).ready(function() {
+        // Force parallax initialization
+        $('[data-parallax="scroll"]').each(function() {
+            $(this).parallax();
+        });
+    });
+    
+    $(window).on('load', function() {
+        // Reinitialize after window load
+        $('[data-parallax="scroll"]').parallax('refresh');
+    });
     
     // Refresh AOS on dynamic content changes
     document.addEventListener('DOMContentLoaded', function() {
